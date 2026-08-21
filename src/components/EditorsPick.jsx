@@ -17,17 +17,23 @@ function EditorsPick() {
 
         <article className="grid lg:grid-cols-[1.2fr_0.8fr] gap-10 lg:gap-16 mt-10 items-center">
 
-          <div className="group relative h-[400px] md:h-[540px] bg-[#d5d2cb] overflow-hidden">
+          <div className="group relative h-[400px] md:h-[540px] overflow-hidden bg-[#d5d2cb]">
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
+            <img
+              src={editorsPick.image}
+              alt={editorsPick.title}
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
 
-            <div className="absolute bottom-6 left-6 text-white">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+
+            <div className="absolute bottom-6 left-6 right-6 text-white">
               <p className="text-xs uppercase tracking-[0.2em] text-white/70">
                 Editor&apos;s Selection
               </p>
 
-              <p className="mt-2 text-sm text-white/50">
-                Visual coming during media pass
+              <p className="mt-2 text-xl md:text-2xl font-medium max-w-lg">
+                A deeper read on business, people and workplace change.
               </p>
             </div>
 

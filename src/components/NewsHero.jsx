@@ -1,119 +1,96 @@
 function NewsHero() {
-  return (
-    <section className="bg-[#0b0b0b] text-white">
-      <div className="max-w-7xl mx-auto px-6 py-10 md:py-14">
+  const categories = [
+    "Latest",
+    "Business",
+    "Technology",
+    "Careers",
+    "Workplace",
+    "Articles",
+  ];
 
-        {/* Top Bar */}
-        <div className="flex items-center justify-between border-b border-white/15 pb-4">
-          <p className="text-xs md:text-sm uppercase tracking-[0.28em] text-white/60">
+  return (
+    <section className="relative overflow-hidden bg-[#080b0b] text-white">
+      {/* Background details */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute right-[-120px] top-[-80px] h-[420px] w-[420px] rounded-full bg-emerald-400/[0.04] blur-[120px]" />
+
+        <div className="absolute left-[-100px] bottom-[-120px] h-[360px] w-[360px] rounded-full bg-white/[0.025] blur-[120px]" />
+
+        {/* Decorative curved lines */}
+        <div className="absolute right-[-80px] top-[80px] h-[380px] w-[520px] opacity-[0.07]">
+          <div className="absolute inset-0 rounded-[50%] border border-white/20 rotate-[-12deg]" />
+          <div className="absolute inset-[28px] rounded-[50%] border border-white/15 rotate-[-8deg]" />
+          <div className="absolute inset-[56px] rounded-[50%] border border-white/10 rotate-[-4deg]" />
+        </div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 pt-8 pb-7 md:pt-10 md:pb-8">
+        {/* Top bar */}
+        <div className="flex items-center justify-between border-b border-white/12 pb-4">
+          <p className="text-[10px] md:text-xs uppercase tracking-[0.26em] text-white/65">
             Minivel / News & Articles
           </p>
 
-          <p className="text-xs uppercase tracking-[0.22em] text-white/40">
-            Latest Edition
-          </p>
+          <div className="flex items-center gap-2.5">
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+
+            <p className="text-[10px] uppercase tracking-[0.2em] text-white/45">
+              Latest Edition
+            </p>
+          </div>
         </div>
 
-        {/* Main Hero */}
-        <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-16 py-14 md:py-20 items-end">
-
+        {/* Main hero */}
+        <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-16 py-14 md:py-16 lg:py-18 items-end">
           {/* Left */}
           <div>
-            <p className="text-xs uppercase tracking-[0.25em] text-white/50 mb-6">
+            <p className="text-[10px] md:text-xs uppercase tracking-[0.22em] text-emerald-300/80 mb-5">
               Business · Careers · Technology · Workplace
             </p>
 
-            <h1 className="text-5xl md:text-7xl lg:text-[88px] font-semibold leading-[0.95] tracking-tight max-w-4xl">
-              Stories that explain what&apos;s changing.
+            <h1 className="hero-heading max-w-[760px] text-[44px] md:text-[60px] lg:text-[68px] font-medium leading-[1.05] tracking-[-0.03em]">
+              Timely stories.
+              <span className="block mt-1 text-white/95">
+                Relevant insights.
+              </span>
+              <span className="block mt-1 text-white/80">
+                Real impact.
+              </span>
             </h1>
           </div>
 
           {/* Right */}
-          <div className="lg:pb-2">
-
-            {/* Media Panel */}
-            <div className="group relative h-[280px] md:h-[340px] lg:h-[360px] bg-white/5 border border-white/10 overflow-hidden">
-
-              {/* Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-
-              {/* Top Label */}
-              <div className="absolute top-5 left-5">
-                <span className="text-xs uppercase tracking-[0.2em] text-white/60">
-                  Featured Visual
-                </span>
-              </div>
-
-              {/* Center Decoration */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-20 h-20 rounded-full border border-white/20 flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
-                  <span className="text-xl text-white/70">
-                    →
-                  </span>
-                </div>
-              </div>
-
-              {/* Bottom Text */}
-              <div className="absolute bottom-5 left-5 right-5">
-                <p className="text-xs uppercase tracking-[0.18em] text-white/50">
-                  Minivel Editorial
-                </p>
-
-                <p className="mt-2 text-xl md:text-2xl font-medium leading-snug max-w-md">
-                  Stories that connect business, people and change.
-                </p>
-              </div>
-
-            </div>
-
-            {/* Description */}
-            <p className="mt-6 text-base md:text-lg text-white/60 leading-relaxed max-w-xl">
-              News, perspectives and useful ideas across business, careers,
-              technology and the modern workplace.
+          <div className="max-w-[430px] lg:ml-auto">
+            <p className="text-[16px] md:text-[17px] leading-[1.75] text-white/60">
+              Explore the ideas, news and perspectives driving change across
+              business, careers, technology and the workplace.
             </p>
 
-            {/* CTA */}
-            <button className="group mt-7 inline-flex items-center gap-3 text-sm uppercase tracking-[0.18em] border-b border-white/50 pb-2">
+            <button className="group mt-7 inline-flex items-center gap-4 text-[11px] uppercase tracking-[0.2em] text-white/80">
               Explore Latest
 
-              <span className="transition-transform duration-300 group-hover:translate-y-1">
-                ↓
+              <span className="flex h-10 w-10 items-center justify-center rounded-full border border-emerald-400/50 text-emerald-300 transition-all duration-300 group-hover:bg-emerald-400 group-hover:text-black group-hover:scale-105">
+                →
               </span>
             </button>
-
           </div>
-
         </div>
 
-        {/* Categories */}
-        <div className="border-t border-white/15 pt-5 flex flex-wrap gap-x-8 gap-y-3 text-xs uppercase tracking-[0.18em] text-white/50">
-
-          <button className="text-white">
-            Latest
-          </button>
-
-          <button className="hover:text-white transition-colors">
-            Business
-          </button>
-
-          <button className="hover:text-white transition-colors">
-            Technology
-          </button>
-
-          <button className="hover:text-white transition-colors">
-            Careers
-          </button>
-
-          <button className="hover:text-white transition-colors">
-            Workplace
-          </button>
-
-          <button className="hover:text-white transition-colors">
-            Articles
-          </button>
-
+        {/* Bottom nav */}
+        <div className="border-t border-white/12 pt-5 flex flex-wrap gap-x-8 gap-y-3">
+          {categories.map((item, index) => (
+            <button
+              key={item}
+              className={`text-[10px] md:text-xs uppercase tracking-[0.18em] transition-colors duration-300 ${
+                index === 0
+                  ? "text-white"
+                  : "text-white/45 hover:text-white"
+              }`}
+            >
+              {item}
+            </button>
+          ))}
         </div>
-
       </div>
     </section>
   );

@@ -7,6 +7,7 @@ import CareersWorkplace from "./components/CareersWorkplace";
 import TrendingStories from "./components/TrendingStories";
 import EditorsPick from "./components/EditorsPick";
 import NewsFooterCTA from "./components/NewsFooterCTA";
+import VideoFeature from "./components/VideoFeature";
 function App() {
   return (
     <main>
@@ -15,6 +16,7 @@ function App() {
       <LatestNews />
       <ArticleGrid />
       <BusinessIndustry />
+      <VideoFeature />
       <CareersWorkplace />
       <TrendingStories />
       <EditorsPick />
