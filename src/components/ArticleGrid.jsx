@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { featuredArticles } from "../data/newsData";
 
 function ArticleGrid() {
@@ -17,9 +18,16 @@ function ArticleGrid() {
             </h2>
           </div>
 
-          <p className="hidden md:block text-[10px] uppercase tracking-[0.2em] text-black/35">
-            Longer Reads
-          </p>
+          <Link
+  to="/insights"
+  className="group hidden md:inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.2em] text-black/45 transition-colors hover:text-black"
+>
+  View All Insights
+
+  <span className="transition-transform duration-300 group-hover:translate-x-1">
+    →
+  </span>
+</Link>
         </div>
 
         {/* Articles */}

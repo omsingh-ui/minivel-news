@@ -1,10 +1,10 @@
 export const latestNews = [
   {
     id: 1,
-    category: "Hiring",
-    title: "Tech hiring grows, but fresher share falls in India",
+    category: "Talent & Hiring",
+    title: "Tech hiring grows as fresher recruitment becomes more selective",
     description:
-      "Technology hiring grew year-on-year in July, while the share of fresher recruitment declined as employers became more selective.",
+      "Technology hiring continues to grow, while a lower fresher share points to changing expectations around skills and job readiness.",
     date: "August 6, 2026",
     source: "Economic Times",
     sourceUrl:
@@ -13,10 +13,10 @@ export const latestNews = [
 
   {
     id: 2,
-    category: "Careers",
+    category: "Careers & Growth",
     title: "Fresher hiring intent remains strong across India",
     description:
-      "Three in four employers plan to hire freshers in the second half of 2026, although hiring expectations vary significantly across industries.",
+      "Employer hiring intent remains encouraging for fresh graduates, although opportunities and demand continue to vary across industries.",
     date: "August 10, 2026",
     source: "Economic Times",
     sourceUrl:
@@ -25,10 +25,10 @@ export const latestNews = [
 
   {
     id: 3,
-    category: "Business",
-    title: "Charles Schwab plans major expansion of its India workforce",
+    category: "Workforce & Business",
+    title: "Charles Schwab plans significant expansion of its India workforce",
     description:
-      "The financial services company plans to scale its India workforce toward 2,000 employees by the end of 2027.",
+      "The planned expansion highlights the continuing role of India as companies build technology and business capabilities at scale.",
     date: "August 19, 2026",
     source: "Reuters",
     sourceUrl:
@@ -37,10 +37,10 @@ export const latestNews = [
 
   {
     id: 4,
-    category: "Talent",
+    category: "Talent Development",
     title: "Cognizant hires 489 business-school graduates across India",
     description:
-      "The company recruited graduates from 58 business schools and launched a dedicated Talent Accelerator onboarding programme.",
+      "The hiring initiative combines graduate recruitment with a dedicated onboarding programme focused on accelerating early-career talent.",
     date: "August 19, 2026",
     source: "Times of India",
     sourceUrl:
@@ -51,30 +51,30 @@ export const latestNews = [
 export const featuredArticles = [
   {
     id: 1,
-    category: "Careers",
-    title: "Why continuous learning matters more in a changing job market",
+    category: "Talent & Hiring",
+    title: "Why skills-first hiring is changing how organizations discover talent",
     description:
-      "As roles evolve, professionals are increasingly expected to keep building new skills throughout their careers.",
+      "Employers are placing greater value on practical capability, adaptability and potential alongside traditional qualifications.",
     image: "/images/article-1.jpg",
     readTime: "5 min read",
   },
 
   {
     id: 2,
-    category: "Workplace",
-    title: "What employees expect from modern workplaces",
+    category: "People & Workplace",
+    title: "What professionals increasingly expect from the modern workplace",
     description:
-      "Flexibility, growth opportunities and better work experiences are becoming important factors in career decisions.",
+      "Growth opportunities, meaningful work, flexibility and strong workplace experiences are becoming more important in career decisions.",
     image: "/images/article-2.jpg",
     readTime: "4 min read",
   },
 
   {
     id: 3,
-    category: "Business",
-    title: "How companies are adapting workforce strategies for growth",
+    category: "Workforce & Business",
+    title: "Why workforce strategy is becoming central to business growth",
     description:
-      "Businesses are rethinking how they hire, develop and organize teams as markets and technologies continue to change.",
+      "Organizations are thinking more carefully about skills, talent pipelines and workforce capability as they prepare to scale.",
     image: "/images/article-3.jpg",
     readTime: "6 min read",
   },
@@ -83,34 +83,32 @@ export const featuredArticles = [
 export const businessStories = [
   {
     id: 1,
-    category: "Business",
-    title: "India's GCC expansion creates a growing talent challenge",
+    category: "Workforce Strategy",
+    title: "Why workforce planning is becoming central to business growth",
     description:
-      "Global capability centres continue expanding across India, increasing demand for specialised digital, engineering and business talent.",
+      "Organizations are thinking more carefully about skills, talent pipelines and workforce capability as they prepare to scale.",
     date: "August 2026",
-    source: "Industry Update",
+    source: "Minivel Editorial",
   },
 
   {
     id: 2,
-    category: "Business",
-    title: "Charles Schwab plans to expand its India workforce",
+    category: "Talent Demand",
+    title: "Changing skill requirements are reshaping how companies build teams",
     description:
-      "The financial services company plans to grow its India workforce toward 2,000 employees by the end of 2027.",
-    date: "August 19, 2026",
-    source: "Reuters",
-    sourceUrl:
-      "https://www.reuters.com/world/india/charles-schwab-scale-india-tech-centre-workforce-2000-by-2027-source-says-2026-08-19/",
+      "Digital, technical and business capabilities are becoming more important as organizations adapt to new ways of working.",
+    date: "August 2026",
+    source: "Minivel Editorial",
   },
 
   {
     id: 3,
-    category: "Workplace",
-    title: "Workplace expectations continue to change across younger professionals",
+    category: "People & Workplace",
+    title: "Workplace expectations are influencing how organizations attract talent",
     description:
-      "Career progression, flexibility, learning opportunities and meaningful work are increasingly shaping employment decisions.",
+      "Career progression, learning opportunities, flexibility and meaningful work are increasingly shaping candidate decisions.",
     date: "August 2026",
-    source: "Industry Perspective",
+    source: "Minivel Editorial",
   },
 ];
 
@@ -118,28 +116,28 @@ export const careerStories = [
   {
     id: 1,
     number: "01",
-    category: "Careers",
-    title: "Skills-first hiring is becoming more important across industries",
+    category: "Career Readiness",
+    title: "The skills helping candidates stand out in a changing job market",
     description:
-      "Employers are increasingly looking at practical capabilities alongside qualifications when evaluating candidates.",
+      "Employers increasingly value communication, adaptability, problem solving and practical capability alongside qualifications.",
   },
 
   {
     id: 2,
     number: "02",
-    category: "Workplace",
-    title: "Professionals are placing greater value on learning and flexibility",
+    category: "Workplace Expectations",
+    title: "What professionals increasingly value in the modern workplace",
     description:
-      "Career development, work-life flexibility and opportunities to build new skills are influencing employment choices.",
+      "Learning opportunities, meaningful work, flexibility and supportive workplace experiences are shaping career decisions.",
   },
 
   {
     id: 3,
     number: "03",
-    category: "Career Growth",
-    title: "Continuous learning is becoming part of long-term career development",
+    category: "Continuous Growth",
+    title: "Why adaptability and continuous learning are becoming career advantages",
     description:
-      "As roles evolve, professionals are increasingly expected to refresh their skills throughout their careers.",
+      "As roles evolve, professionals who keep developing new skills are better prepared to navigate changing opportunities.",
   },
 ];
 
@@ -147,45 +145,55 @@ export const trendingStories = [
   {
     id: 1,
     number: "01",
-    category: "Hiring",
-    title: "India's changing fresher hiring landscape",
+    category: "Talent & Hiring",
+    title:
+      "Why skills-first hiring is gaining momentum across modern recruitment",
   },
 
   {
     id: 2,
     number: "02",
-    category: "Business",
-    title: "Why global companies continue expanding teams in India",
+    category: "Future of Work",
+    title:
+      "Where human judgment matters most in an AI-enabled workplace",
   },
 
   {
     id: 3,
     number: "03",
-    category: "Careers",
-    title: "The skills becoming more valuable across modern workplaces",
+    category: "Workforce & Business",
+    title:
+      "Why businesses are thinking differently about long-term talent strategy",
   },
 
   {
     id: 4,
     number: "04",
-    category: "Technology",
-    title: "How digital transformation is changing everyday business operations",
+    category: "Careers & Growth",
+    title:
+      "The capabilities becoming more valuable as careers continue to evolve",
   },
 
   {
     id: 5,
     number: "05",
-    category: "Workplace",
-    title: "What younger professionals expect from employers today",
+    category: "People & Workplace",
+    title:
+      "Why candidate and employee experience matter more in a changing world of work",
   },
 ];
 
 export const editorsPick = {
   id: 1,
-  category: "Editor's Pick",
-  title: "How businesses can prepare for the next phase of workplace change",
+  category: "Future of Work",
+
+  title:
+    "The future of hiring isn't AI or human intelligence. It's both.",
+
   description:
-    "A deeper look at the shifts affecting people, technology, leadership and the way modern organizations operate.",
+    "Technology can make hiring faster and more informed, but understanding people, potential and context still requires human judgment. The future lies in bringing both together.",
+
   readTime: "8 min read",
+
   image: "/images/editors-pick.jpg",
 };

@@ -1,6 +1,10 @@
+import { Link } from "react-router-dom";
 function FeaturedStory() {
   return (
-    <section className="bg-[#e8ebe7] text-[#111111]">
+    <section
+  id="featured-story"
+  className="bg-[#e8ebe7] text-[#111111]"
+>
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-12 md:py-14">
 
         {/* Section header */}
@@ -71,13 +75,16 @@ function FeaturedStory() {
               <span>Featured</span>
             </div>
 
-            <button className="group mt-7 inline-flex items-center gap-4 text-[11px] uppercase tracking-[0.2em] text-black/75">
-              Read Story
+            <Link
+  to="/article/business-people-workplace-transition"
+  className="group mt-7 inline-flex items-center gap-4 text-[11px] uppercase tracking-[0.2em] text-black/75"
+>
+  Read Story
 
-              <span className="flex h-10 w-10 items-center justify-center rounded-full border border-black/15 transition-all duration-300 group-hover:bg-[#111] group-hover:text-white group-hover:translate-x-1">
-                →
-              </span>
-            </button>
+  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-black/15 transition-all duration-300 group-hover:bg-[#111] group-hover:text-white group-hover:translate-x-1">
+    →
+  </span>
+</Link>
           </div>
 
         </div>
