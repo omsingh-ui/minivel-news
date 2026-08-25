@@ -10,86 +10,126 @@ function NewsHero() {
 
   return (
     <section className="relative overflow-hidden bg-[#080b0b] text-white">
-      {/* Background details */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute right-[-120px] top-[-80px] h-[420px] w-[420px] rounded-full bg-emerald-400/[0.04] blur-[120px]" />
+      {/* Background atmosphere */}
+      <div className="pointer-events-none absolute inset-0">
 
-        <div className="absolute left-[-100px] bottom-[-120px] h-[360px] w-[360px] rounded-full bg-white/[0.025] blur-[120px]" />
+        {/* Emerald glow */}
+        <div className="absolute right-[-120px] top-[-80px] h-[500px] w-[500px] rounded-full bg-emerald-400/[0.035] blur-[140px]" />
 
-        {/* Decorative curved lines */}
-        <div className="absolute right-[-80px] top-[80px] h-[380px] w-[520px] opacity-[0.07]">
-          <div className="absolute inset-0 rounded-[50%] border border-white/20 rotate-[-12deg]" />
-          <div className="absolute inset-[28px] rounded-[50%] border border-white/15 rotate-[-8deg]" />
-          <div className="absolute inset-[56px] rounded-[50%] border border-white/10 rotate-[-4deg]" />
+        {/* Left soft glow */}
+        <div className="absolute bottom-[-140px] left-[-120px] h-[380px] w-[380px] rounded-full bg-white/[0.02] blur-[130px]" />
+
+        {/* Decorative curves */}
+        <div className="absolute right-[-70px] top-[70px] h-[520px] w-[620px] opacity-[0.07]">
+          <div className="absolute inset-0 rotate-[-10deg] rounded-[50%] border border-emerald-200/20" />
+
+          <div className="absolute inset-[42px] rotate-[-7deg] rounded-[50%] border border-emerald-200/15" />
+
+          <div className="absolute inset-[84px] rotate-[-4deg] rounded-[50%] border border-emerald-200/10" />
         </div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 pt-8 pb-7 md:pt-10 md:pb-8">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 pb-7 pt-8 md:px-8 md:pb-8 md:pt-10">
+
         {/* Top bar */}
-        <div className="flex items-center justify-between border-b border-white/12 pb-4">
-          <p className="text-[10px] md:text-xs uppercase tracking-[0.26em] text-white/65">
+        <div className="flex items-center justify-between border-b border-white/10 pb-4">
+
+          <p className="text-[10px] uppercase tracking-[0.26em] text-white/65 md:text-xs">
             Minivel / News & Articles
           </p>
 
           <div className="flex items-center gap-2.5">
+
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
 
             <p className="text-[10px] uppercase tracking-[0.2em] text-white/45">
               Latest Edition
             </p>
+
           </div>
         </div>
 
         {/* Main hero */}
-        <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-16 py-14 md:py-16 lg:py-18 items-end">
+        <div className="grid gap-8 py-12 md:py-14 lg:grid-cols-[1.12fr_0.88fr] lg:items-end lg:gap-10">
+
           {/* Left */}
           <div>
-            <p className="text-[10px] md:text-xs uppercase tracking-[0.22em] text-emerald-300/80 mb-5">
+            <p className="mb-5 text-[10px] uppercase tracking-[0.22em] text-emerald-300/80 md:text-xs">
               Business · Careers · Technology · Workplace
             </p>
 
-            <h1 className="hero-heading max-w-[760px] text-[44px] md:text-[60px] lg:text-[68px] font-medium leading-[1.05] tracking-[-0.03em]">
+            <h1 className="hero-heading max-w-[780px] text-[46px] font-medium leading-[1.02] tracking-[-0.035em] md:text-[62px] lg:text-[70px]">
+
               Timely stories.
-              <span className="block mt-1 text-white/95">
+
+              <span className="mt-1 block text-white/95">
                 Relevant insights.
               </span>
-              <span className="block mt-1 text-white/80">
+
+              <span className="mt-1 block text-white/78">
                 Real impact.
               </span>
+
             </h1>
+
+            {/* Supporting text directly below heading */}
+            <p className="mt-7 max-w-[620px] text-[15px] leading-[1.75] text-white/52 md:text-[17px]">
+              Explore the ideas, news and perspectives shaping what matters
+              across business, careers, technology and the workplace.
+            </p>
           </div>
 
           {/* Right */}
-          <div className="max-w-[430px] lg:ml-auto">
-            <p className="text-[16px] md:text-[17px] leading-[1.75] text-white/60">
-              Explore the ideas, news and perspectives driving change across
-              business, careers, technology and the workplace.
-            </p>
+          <div className="flex items-end lg:justify-end">
 
-            <button className="group mt-7 inline-flex items-center gap-4 text-[11px] uppercase tracking-[0.2em] text-white/80">
-              Explore Latest
+            <div className="w-full max-w-[420px]">
 
-              <span className="flex h-10 w-10 items-center justify-center rounded-full border border-emerald-400/50 text-emerald-300 transition-all duration-300 group-hover:bg-emerald-400 group-hover:text-black group-hover:scale-105">
-                →
-              </span>
-            </button>
+              {/* Small editorial message */}
+              <p className="text-[10px] uppercase tracking-[0.22em] text-emerald-300/55">
+                Explore the latest
+              </p>
+
+              <p className="mt-3 text-[16px] leading-[1.7] text-white/48">
+                Stay close to the developments, perspectives and ideas shaping
+                people, organizations and the way work continues to evolve.
+              </p>
+
+              {/* CTA */}
+              <button className="group mt-6 inline-flex items-center gap-4 text-[11px] uppercase tracking-[0.2em] text-white/80">
+
+                Explore Latest
+
+                <span className="flex h-11 w-11 items-center justify-center rounded-full border border-emerald-400/45 text-emerald-300 transition-all duration-300 group-hover:translate-x-1 group-hover:bg-emerald-400 group-hover:text-black">
+                  →
+                </span>
+
+              </button>
+
+            </div>
           </div>
         </div>
 
         {/* Bottom nav */}
-        <div className="border-t border-white/12 pt-5 flex flex-wrap gap-x-8 gap-y-3">
+        <div className="flex flex-wrap gap-x-8 gap-y-3 border-t border-white/10 pt-5">
+
           {categories.map((item, index) => (
             <button
               key={item}
-              className={`text-[10px] md:text-xs uppercase tracking-[0.18em] transition-colors duration-300 ${
+              className={`relative pb-2 text-[10px] uppercase tracking-[0.18em] transition-colors duration-300 md:text-xs ${
                 index === 0
                   ? "text-white"
                   : "text-white/45 hover:text-white"
               }`}
             >
               {item}
+
+              {/* Active indicator */}
+              {index === 0 && (
+                <span className="absolute bottom-0 left-0 h-px w-full bg-emerald-300/75" />
+              )}
             </button>
           ))}
+
         </div>
       </div>
     </section>

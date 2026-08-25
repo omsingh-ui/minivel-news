@@ -51,28 +51,34 @@ export const latestNews = [
 export const featuredArticles = [
   {
     id: 1,
+    slug: "skills-first-hiring",
     category: "Talent & Hiring",
-    title: "Why skills-first hiring is changing how organizations discover talent",
+    title:
+      "Why skills-first hiring is changing how organizations discover talent",
     description:
       "Employers are placing greater value on practical capability, adaptability and potential alongside traditional qualifications.",
     image: "/images/article-1.jpg",
-    readTime: "5 min read",
+    readTime: "6 min read",
   },
 
   {
     id: 2,
+    slug: "workplace-expectations",
     category: "People & Workplace",
-    title: "What professionals increasingly expect from the modern workplace",
+    title:
+      "What professionals increasingly expect from the modern workplace",
     description:
-      "Growth opportunities, meaningful work, flexibility and strong workplace experiences are becoming more important in career decisions.",
+      "Growth, clarity, meaningful work and the quality of everyday workplace experience are becoming more important in career decisions.",
     image: "/images/article-2.jpg",
-    readTime: "4 min read",
+    readTime: "6 min read",
   },
 
   {
     id: 3,
+    slug: "workforce-planning-business-growth",
     category: "Workforce & Business",
-    title: "Why workforce strategy is becoming central to business growth",
+    title:
+      "Why workforce strategy is becoming central to business growth",
     description:
       "Organizations are thinking more carefully about skills, talent pipelines and workforce capability as they prepare to scale.",
     image: "/images/article-3.jpg",
@@ -81,25 +87,45 @@ export const featuredArticles = [
 ];
 
 export const businessStories = [
-  {
-    id: 1,
-    category: "Workforce Strategy",
-    title: "Why workforce planning is becoming central to business growth",
-    description:
-      "Organizations are thinking more carefully about skills, talent pipelines and workforce capability as they prepare to scale.",
-    date: "August 2026",
-    source: "Minivel Editorial",
-  },
+ {
+  id: 1,
 
-  {
-    id: 2,
-    category: "Talent Demand",
-    title: "Changing skill requirements are reshaping how companies build teams",
-    description:
-      "Digital, technical and business capabilities are becoming more important as organizations adapt to new ways of working.",
-    date: "August 2026",
-    source: "Minivel Editorial",
-  },
+  slug: "india-msme-growth-talent-partner",
+
+  category: "Business & Industry",
+
+  title:
+    "India's MSME growth story needs the right talent partner",
+
+  description:
+    "Growing businesses often face a different hiring challenge: they need speed, quality and access to talent without the recruitment infrastructure of a large enterprise.",
+
+  date: "June 2026",
+
+  source: "Minivel Editorial",
+
+  image: "/images/msme-growth.png",
+},
+
+ {
+  id: 2,
+
+  slug: "cost-of-a-delayed-hire",
+
+  category: "Hiring Strategy",
+
+  title:
+    "The cost of a delayed hire is higher than you think",
+
+  description:
+    "Critical vacancies can affect revenue, customer delivery and expansion, turning hiring speed into a business issue rather than only an HR metric.",
+
+  date: "July 2026",
+
+  source: "Minivel Editorial",
+
+  image: "/images/delayed-hire.png",
+},
 
   {
     id: 3,

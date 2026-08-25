@@ -5,7 +5,7 @@ import FeaturedStory from "./components/FeaturedStory";
 import LatestNews from "./components/LatestNews";
 import ArticleGrid from "./components/ArticleGrid";
 import BusinessIndustry from "./components/BusinessIndustry";
-import VideoFeature from "./components/VideoFeature";
+import VisualStory from "./components/VisualStory";
 import CareersWorkplace from "./components/CareersWorkplace";
 import TrendingStories from "./components/TrendingStories";
 import EditorsPick from "./components/EditorsPick";
@@ -26,7 +26,7 @@ function Home() {
       <LatestNews />
       <ArticleGrid />
       <BusinessIndustry />
-      <VideoFeature />
+      <VisualStory />
       <CareersWorkplace />
       <TrendingStories />
       <EditorsPick />

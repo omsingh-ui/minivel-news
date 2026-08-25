@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { businessStories } from "../data/newsData";
 
 function BusinessIndustry() {
@@ -12,9 +13,12 @@ function BusinessIndustry() {
               Business & Industry
             </p>
 
-            <h2 className="mt-2 text-3xl md:text-4xl font-medium tracking-[-0.02em]">
-              Signals shaping the market.
-            </h2>
+           <h2 className="mt-2 max-w-2xl text-3xl md:text-4xl font-medium tracking-[-0.02em]">
+  Where business growth meets talent.
+</h2>
+<p className="mt-3 max-w-2xl text-sm md:text-[15px] leading-[1.7] text-white/45">
+  Stories and perspectives on the industries, talent challenges and workforce decisions shaping business growth.
+</p>
           </div>
 
           <p className="hidden md:block text-[10px] uppercase tracking-[0.2em] text-white/35">
@@ -27,11 +31,12 @@ function BusinessIndustry() {
 
           {/* Left - Signal List */}
           <div className="border-t border-white/12">
-            {businessStories.map((story, index) => (
-              <article
-                key={story.id}
-                className="group relative grid grid-cols-[55px_1fr] gap-4 py-6 border-b border-white/12"
-              >
+           {businessStories.map((story, index) => (
+  <Link
+    key={story.id}
+    to={story.slug ? `/article/${story.slug}` : "#"}
+    className="group relative grid grid-cols-[55px_1fr] gap-4 py-6 border-b border-white/12"
+  >
                 <span className="text-sm text-white/25 transition-colors duration-300 group-hover:text-emerald-300">
                   0{index + 1}
                 </span>
@@ -61,7 +66,7 @@ function BusinessIndustry() {
                 </div>
 
                 <span className="absolute bottom-[-1px] left-0 h-[1px] w-0 bg-emerald-400 transition-all duration-500 group-hover:w-full" />
-              </article>
+              </Link>
             ))}
           </div>
 

@@ -33,8 +33,12 @@ function ArticleGrid() {
         {/* Articles */}
         <div className="grid lg:grid-cols-[1.12fr_0.88fr] gap-8 lg:gap-10 mt-8">
 
+          
           {/* Main Article */}
-          <article className="group">
+          <Link
+            to="/article/skills-first-hiring"
+            className="group block"
+          >
             <div className="relative h-[360px] md:h-[500px] overflow-hidden rounded-[20px]">
               <img
                 src={featuredArticles[0].image}
@@ -70,21 +74,22 @@ function ArticleGrid() {
                 {featuredArticles[0].readTime}
               </p>
 
-              <button className="group/arrow flex h-10 w-10 items-center justify-center rounded-full border border-black/15 transition-all duration-300 hover:bg-[#111] hover:text-white">
-                <span className="transition-transform duration-300 group-hover/arrow:translate-x-1">
-                  →
-                </span>
-              </button>
+              <span className="group/arrow flex h-10 w-10 items-center justify-center rounded-full border border-black/15 transition-all duration-300 group-hover:bg-[#111] group-hover:text-white">
+              <span className="transition-transform duration-300 group-hover/arrow:translate-x-1">
+               →
+              </span>
+              </span>
             </div>
-          </article>
+          </Link>
 
           {/* Secondary Articles */}
           <div className="space-y-5">
-            {featuredArticles.slice(1).map((article, index) => (
-              <article
-                key={article.id}
-                className="group grid sm:grid-cols-[180px_1fr] gap-5 rounded-[18px] border border-black/[0.08] bg-white/60 p-4 transition-all duration-500 hover:-translate-y-1 hover:bg-white hover:shadow-[0_18px_50px_rgba(0,0,0,0.08)]"
-              >
+           {featuredArticles.slice(1).map((article, index) => (
+  <Link
+    key={article.id}
+    to={`/article/${article.slug}`}
+    className="group grid sm:grid-cols-[180px_1fr] gap-5 rounded-[18px] border border-black/[0.08] bg-white/60 p-4 transition-all duration-500 hover:-translate-y-1 hover:bg-white hover:shadow-[0_18px_50px_rgba(0,0,0,0.08)]"
+  >
                 {/* Image */}
                 <div className="relative h-[170px] sm:h-full min-h-[180px] overflow-hidden rounded-[14px]">
                   <img
@@ -128,7 +133,7 @@ function ArticleGrid() {
                     </span>
                   </div>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
 
