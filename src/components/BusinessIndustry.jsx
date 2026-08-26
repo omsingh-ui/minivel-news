@@ -8,7 +8,7 @@ function BusinessIndustry() {
       title: "AI is powerful. Integrated AI is transformational.",
       description:
         "Embedding intelligence across the hiring workflow for smarter decisions and stronger outcomes.",
-      slug: null,
+      slug: "integrated-ai-transformational-recruitment",
       type: "ai",
     },
     {
@@ -36,7 +36,7 @@ function BusinessIndustry() {
         "The best recruiters don't fill roles. They solve business problems.",
       description:
         "From insight to impact — building stronger teams and better organizations.",
-      slug: null,
+      slug: "best-recruiters-solve-business-problems",
       type: "talent",
     },
     {

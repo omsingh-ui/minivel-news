@@ -179,13 +179,19 @@ function ArticleDetail() {
           <img
             src={article.image}
             alt={article.title}
-          className={
+         className={
   article.heroImageSize === "compact"
     ? "block h-auto w-[82%] max-w-[430px] rounded-[26px]"
+
     : article.heroImageSize === "article3"
     ? "block h-auto w-[86%] max-w-[540px] rounded-[26px]"
-  : article.heroImageSize === "article4"
-? "block h-[470px] w-full max-w-[620px] rounded-[22px] object-contain object-center"
+
+    : article.heroImageSize === "article4"
+    ? "block h-[470px] w-full max-w-[620px] rounded-[22px] object-contain object-center"
+
+ : article.heroImageSize === "article5"
+? "block h-auto w-full rounded-[26px]"
+
     : "block h-auto w-full"
 }
           />

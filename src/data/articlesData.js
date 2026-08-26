@@ -974,5 +974,214 @@ perspectiveInsight:
 takeaway:
   "India's automotive transformation will ultimately be powered by the people behind it. Building strong teams across technology, engineering, manufacturing and business functions — with speed, accuracy and quality — will help organizations turn the future of mobility into sustainable growth.",
 },
+{
+  id: 14,
+
+  slug: "best-recruiters-solve-business-problems",
+
+  category: "Talent Strategy",
+
+  title:
+    "The Best Recruiters Don't Fill Roles. They Solve Business Problems.",
+
+  intro:
+    "As technology and AI automate more transactional recruitment activity, the role of the recruiter is becoming more strategic. The real value increasingly lies in understanding business needs, interpreting talent markets and helping organizations make better workforce decisions.",
+
+  readTime: "6 min read",
+
+  image: "/images/talent-advisor-wide.png",
+
+  imageType: "infographic",
+
+  heroImageSize: "article5",
+
+  heroTitleSize: "article5",
+
+ openingPerspective:
+  "Recruitment is no longer defined only by how quickly candidates can be sourced or positions can be closed. As technology automates more transactional work, the recruiter's value is shifting toward understanding business priorities, talent markets and the capabilities organizations will need for future growth.",
+
+ perspectiveInsight:
+  "Technology helps gather insights faster. Human expertise provides the context, judgment and understanding needed to turn those insights into better business decisions.",
+
+  focusCard: {
+    label: "Talent Advisor Lens",
+
+    title:
+      "The modern recruiter's value is moving beyond filling vacancies toward helping organizations understand what talent they need, where to find it and how to build for what comes next.",
+  },
+
+  capabilityCards: [
+    {
+      number: "01",
+      title: "Understand",
+      text:
+        "Connect hiring requirements with business objectives, organizational culture and future capability needs.",
+    },
+
+    {
+      number: "02",
+      title: "Interpret",
+      text:
+        "Turn market intelligence, compensation data and talent availability into insights leaders can use.",
+    },
+
+    {
+      number: "03",
+      title: "Advise",
+      text:
+        "Help organizations make informed decisions about skills, talent pipelines and long-term workforce strategy.",
+    },
+  ],
+
+  workplaceLens: {
+    label: "Human Intelligence",
+
+    title:
+      "Data becomes more valuable when experienced people understand what it means for the business.",
+
+    text:
+      "AI can accelerate sourcing, analysis and market intelligence, but business context, leadership dynamics, organizational culture and meaningful conversations with candidates still require human understanding.",
+  },
+
+  sections: [
+   {
+  heading: "Recruitment is moving beyond filling vacancies",
+
+  text:
+    "As technology takes on more sourcing, screening and transactional work, the recruiter's role is becoming more strategic. The real value increasingly comes from understanding business priorities, organizational culture and future growth objectives — then using that context to help organizations make stronger talent decisions.",
+},
+{
+  heading: "The right questions come before the right candidates",
+
+  text:
+    "Strong recruitment starts by understanding the business problem behind the hire. Organizations need to know which capabilities will drive future growth, whether those skills are available, how competitive the market is and what compensation will attract the right people. These insights help turn hiring from a reaction to vacancies into a more informed talent strategy.",
+},
+
+{
+  heading: "Market intelligence needs human interpretation",
+
+  text:
+    "Technology can provide faster access to talent data and market insights, but those insights still need context. Industry knowledge, hiring expertise and meaningful conversations with clients and candidates help recruiters understand what the data means and translate it into decisions that support the business.",
+},
+
+{
+  heading: "The recruiter is becoming a Talent Advisor",
+
+  text:
+    "As AI automates more transactional recruitment activity, the recruiter's role will become increasingly strategic. The strongest recruiters will be those who can advise, consult and influence business decisions — helping organizations move beyond individual hires and build the workforce capabilities needed for long-term growth.",
+},
+  ],
+
+  lookingAhead:
+  "As technology takes on more transactional recruitment work, human expertise will become more valuable where context and judgment matter most. Recruiters who understand markets, interpret insights and advise business leaders will play a greater role in shaping future workforce decisions.",
+
+ takeaway:
+  "Hiring great talent is important. Building the right workforce strategy is transformational. When technology, market intelligence and human judgment work together, recruitment can move beyond filling roles and become a strategic driver of business growth.",
+},
+{
+  id: 15,
+
+  slug: "integrated-ai-transformational-recruitment",
+
+  category: "AI & Recruitment",
+
+  title:
+    "AI Is Powerful. Integrated AI Is Transformational.",
+
+  intro:
+    "The real value of AI in recruitment does not come from adding another standalone tool. It comes from embedding intelligence into the hiring workflow — helping recruiters work faster, access better insights and spend more time on the decisions and relationships that matter.",
+
+  readTime: "6 min read",
+
+  image: "/images/integrated-ai-recruitment.png",
+
+  imageType: "infographic",
+
+  heroImageSize: "article6",
+
+  heroTitleSize: "article6",
+
+ openingPerspective:
+  "AI becomes more valuable when it is embedded into the recruitment process rather than used as another standalone tool. By integrating intelligence within the ATS ecosystem, sourcing, screening, talent mapping and market insights can become part of one connected workflow that helps recruiters work faster and make better-informed decisions.",
+ 
+  perspectiveInsight:
+  "The real advantage comes from combining the speed of AI, the structure of a connected recruitment workflow and the judgment of experienced recruiters.",
+
+  focusCard: {
+    label: "Integrated AI Lens",
+
+    title:
+      "When intelligence sits inside the recruitment workflow, technology can support recruiters throughout the hiring journey instead of operating as a separate layer.",
+  },
+
+  capabilityCards: [
+    {
+      number: "01",
+      title: "Connect",
+      text:
+        "Bring candidate information, recruiter activity and hiring insights into a more connected recruitment ecosystem.",
+    },
+
+    {
+      number: "02",
+      title: "Accelerate",
+      text:
+        "Use AI-supported sourcing, screening and talent mapping to identify relevant talent and build targeted pipelines faster.",
+    },
+
+    {
+      number: "03",
+      title: "Empower",
+      text:
+        "Give recruiters more time to understand client needs, evaluate talent and build meaningful candidate relationships.",
+    },
+  ],
+
+  workplaceLens: {
+    label: "Human + AI",
+
+    title:
+      "Technology should amplify recruiter expertise, not replace it.",
+
+    text:
+      "AI can accelerate data-heavy and repetitive activities, while recruiters provide the judgment, business understanding and relationship-building required to turn those capabilities into stronger hiring outcomes.",
+  },
+
+  sections: [
+   {
+  heading: "Integration matters more than adding another AI tool",
+
+  text:
+    "The real value of AI comes from how effectively it fits into the recruitment workflow. When AI capabilities are integrated within the ATS, sourcing, screening, talent mapping and market intelligence can work together in one connected ecosystem — giving recruiters useful insights throughout the hiring journey.",
+},
+
+{
+  heading: "AI can remove friction from the hiring journey",
+
+  text:
+    "Manual sourcing, screening, talent mapping and data gathering can take significant time away from higher-value recruitment work. AI-supported workflows can reduce that effort, helping recruiters identify relevant talent faster, build stronger candidate pipelines and access market insights more efficiently.",
+},
+
+{
+  heading: "A connected ecosystem creates better hiring insight",
+
+  text:
+    "When candidate interactions, recruiter activity and hiring insights exist within one connected ecosystem, teams gain a clearer view of the recruitment journey. This can support smarter decisions, stronger candidate engagement and greater confidence in the hiring process.",
+},
+
+{
+  heading: "The goal is to amplify human expertise",
+
+  text:
+    "AI creates the most value when it gives recruiters more time to focus on what technology cannot replace. Understanding client needs, evaluating talent, interpreting market conditions and building meaningful relationships remain human strengths — while technology helps make the process faster and more informed.",
+},
+  ],
+
+lookingAhead:
+  "As AI becomes more deeply integrated into recruitment, the advantage will come from how effectively organizations connect technology with their hiring workflows. The strongest models will combine intelligent systems with experienced recruiters to deliver faster, smarter and more human hiring outcomes.",
+
+ takeaway:
+  "AI is powerful. Integrated AI is transformational. When the speed of AI, the structure of an intelligent ATS and the judgment of experienced recruiters work together, organizations can make smarter hiring decisions and deliver stronger outcomes for both clients and candidates.",
+},
 
 ];
