@@ -127,15 +127,25 @@ export const businessStories = [
   image: "/images/delayed-hire.png",
 },
 
-  {
-    id: 3,
-    category: "People & Workplace",
-    title: "Workplace expectations are influencing how organizations attract talent",
-    description:
-      "Career progression, learning opportunities, flexibility and meaningful work are increasingly shaping candidate decisions.",
-    date: "August 2026",
-    source: "Minivel Editorial",
-  },
+{
+  id: 3,
+
+  slug: "india-electronics-revolution-women-careers",
+
+  category: "Electronics Manufacturing",
+
+  title:
+    "India's electronics revolution is being powered by women",
+
+  description:
+    "As women take a growing role across India's electronics manufacturing workforce, the next challenge is creating sustainable careers with opportunities to develop, progress and lead.",
+
+  date: "August 2026",
+
+  source: "Minivel",
+
+  image: "/images/women-electronics-revolution.png",
+},
 ];
 
 export const careerStories = [

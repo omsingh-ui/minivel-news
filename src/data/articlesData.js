@@ -690,12 +690,14 @@ export const articlesData = [
 
   image: "/images/delayed-hire.png",
   imageType: "infographic",
+  heroImageSize: "compact",
+  heroTitleSize: "large",
 
-  openingPerspective:
-    "For growing businesses, hiring speed is increasingly a business consideration rather than simply an HR metric. Every critical role left vacant can create pressure elsewhere in the organization.",
+ openingPerspective:
+  "A critical vacancy rarely affects just one position. As the search continues, responsibilities shift to existing teams, decisions can slow and important business priorities may begin to lose momentum. This is why hiring speed increasingly matters beyond the recruitment function.",
 
-  perspectiveInsight:
-    "The longer an important role remains vacant, the more likely its impact is to spread across customers, teams, revenue and growth plans.",
+perspectiveInsight:
+  "The real cost of a delayed hire is not simply the time a position stays open. It is the business momentum that can be lost while the right capability is missing.",
 
   editorialNote:
     "A vacant role does not remain an isolated hiring problem. Over time, it becomes a business constraint.",
@@ -736,32 +738,241 @@ export const articlesData = [
   },
 
   sections: [
+   {
+  heading: "A vacant role can quickly become a business problem",
+  text:
+    "An open position rarely stays contained within one team. A missing sales hire can limit revenue opportunities, an operations vacancy can increase pressure on delivery, and an unfilled support role can push additional responsibility onto existing employees. As the vacancy continues, what began as a hiring challenge can gradually become a wider business constraint.",
+},
+
+{
+  heading: "Hiring speed is becoming a business metric",
+  text:
+    "In competitive talent markets, slow hiring decisions carry a real business cost. Strong candidates often consider several opportunities at once, which means unnecessary interview rounds, unclear ownership or delayed approvals can quickly result in losing the right person. Faster hiring is therefore not about rushing decisions, but removing delays that add little value.",
+},
     {
-      heading: "A vacant role can quickly become a business problem",
-      text:
-        "Critical positions influence much more than headcount. A delayed sales hire can affect revenue opportunities, an operations vacancy can place pressure on customer delivery, and an unfilled finance or HR role can slow the systems needed to support expansion. For growing organizations, where individual roles often carry broader responsibility, these delays can quickly affect business momentum.",
-    },
-    {
-      heading: "Hiring speed is becoming a business metric",
-      text:
-        "Competitive talent markets have increased the cost of slow decision-making. Strong professionals may evaluate several opportunities at the same time and move quickly when the right one appears. Lengthy interview cycles, unclear ownership and delayed approvals can therefore cause businesses to lose relevant candidates.",
-    },
-    {
-      heading: "Faster hiring starts before the vacancy becomes urgent",
-      text:
-        "Reducing time-to-hire does not mean reducing the quality of evaluation. It means preparing earlier. Understanding future workforce needs, maintaining active talent networks, tracking market availability and compensation, and coordinating closely with hiring managers can reduce the work that begins only after a position becomes critical.",
-    },
-    {
-      heading: "Speed and quality need to move together",
-      text:
-        "An effective recruitment process is neither rushed nor unnecessarily slow. It creates enough structure to evaluate talent properly while removing delays that add little value. Proactive talent pipelines, market intelligence and faster internal decision-making can make hiring more predictable and better aligned with business growth.",
-    },
+  heading: "Faster hiring starts before the vacancy becomes urgent",
+  text:
+    "The strongest hiring processes begin before a role becomes critical. Anticipating workforce needs, building relevant talent pipelines and understanding market availability gives businesses more options when demand arrives. Instead of starting from zero, teams can move with greater confidence while still giving every candidate the evaluation the role requires.",
+},
+   {
+  heading: "Speed and quality need to move together",
+  text:
+    "The goal is not to make hiring faster at any cost. Strong recruitment combines timely decisions with careful evaluation, giving businesses the confidence to move quickly without compromising fit. When clear processes, market insight and prepared talent pipelines work together, hiring becomes more responsive to both immediate needs and long-term growth.",
+},
   ],
 
   lookingAhead:
-    "Organizations that prepare for talent demand earlier can spend less time reacting to vacancies and more time choosing the right people for what comes next.",
+  "The organizations that hire well are often the ones that prepare early. Anticipating talent needs creates more time to evaluate carefully, move decisively and choose people who can support what the business needs next.",
+
+ takeaway:
+  "The true cost of a delayed hire is measured beyond the vacancy itself. When critical capability is missing, teams carry more pressure, opportunities can move slower and business momentum can suffer. Better hiring means removing unnecessary delay while protecting the quality of every decision.",
+},
+{
+  id: 12,
+
+  slug: "india-electronics-revolution-women-careers",
+
+  category: "Electronics Manufacturing",
+
+  title:
+    "India's Electronics Revolution Is Being Powered by Women. The Next Challenge Is Building Careers, Not Just Factories.",
+
+  intro:
+    "Across India's electronics manufacturing hubs, women are becoming an increasingly important part of the workforce. But the next stage of growth will depend on more than participation — it will depend on creating workplaces where women can build sustainable, skilled and long-term careers.",
+
+  readTime: "7 min read",
+
+  image: "/images/women-electronics-revolution.png",
+
+  imageType: "infographic",
+  heroImageSize: "article3",
+  heroTitleSize: "article3",
+
+  openingPerspective:
+    "India's electronics manufacturing story is evolving beyond investments, incentives and new factories. Across major manufacturing hubs, women are becoming an increasingly important part of production and operations, contributing to the precision, consistency and quality required by a rapidly expanding industry.",
+
+  perspectiveInsight:
+    "The opportunity now extends beyond increasing participation. India's next manufacturing advantage will depend on whether organizations can turn these opportunities into sustainable careers where women can develop, progress and lead.",
+
+  focusCard: {
+    label: "Manufacturing Lens",
+
+    title:
+      "India's manufacturing advantage will depend not only on attracting more women into the workforce, but on creating the conditions for them to build long-term careers.",
+  },
+
+  capabilityCards: [
+    {
+      number: "01",
+      title: "Support",
+      text:
+        "Create safe and practical workplace conditions through transportation, accommodation, hygiene, childcare support and secure shift policies.",
+    },
+
+    {
+      number: "02",
+      title: "Develop",
+      text:
+        "Build technical capability through continuous upskilling, meaningful experience and opportunities to take on greater responsibility.",
+    },
+
+    {
+      number: "03",
+      title: "Progress",
+      text:
+        "Create visible career pathways that allow women to move beyond entry-level roles into engineering, operations and leadership positions.",
+    },
+  ],
+
+  workplaceLens: {
+    label: "Retention Reality",
+
+    title:
+      "Recruitment can increase participation, but workplace experience determines whether that participation becomes a sustainable career.",
+
+    text:
+      "Safe transportation, appropriate infrastructure, supportive shift policies, development opportunities and visible career progression can all influence whether women are able to build long-term careers in manufacturing.",
+  },
+
+  sections: [
+    {
+  heading: "Women are driving manufacturing excellence",
+
+  text:
+    "Electronics manufacturing depends on precision, consistency and disciplined execution. Across production floors, women are increasingly contributing to quality, productivity and adherence to Standard Operating Procedures, strengthening day-to-day operations as India's electronics ecosystem continues to scale.",
+},
+
+   {
+  heading: "The real challenge is building careers that last",
+
+  text:
+    "Hiring more women is only the first step. Sustainable participation depends on what happens after they join. Safe transportation, hygienic facilities, childcare support, secure shift policies, technical upskilling and visible career progression can help turn manufacturing opportunities into careers that women can build and grow over time.",
+},
+{
+  heading: "Talent strategy must grow alongside manufacturing",
+
+  text:
+    "As manufacturers expand plants, launch greenfield projects and scale production, workforce planning becomes as important as physical capacity. Businesses need access to skilled talent at speed while building pipelines that can support future demand. Recruitment, market intelligence and workforce development therefore need to evolve alongside manufacturing growth.",
+},
+
+{
+  heading: "The next milestone is building long-term capability",
+
+  text:
+    "India's manufacturing success will ultimately depend on the people behind its growth. As women take on wider roles across production, quality, engineering, operations, technology, supply chain and leadership, the opportunity is to turn participation into lasting capability. Organizations that create pathways to learn, progress and lead can build stronger and more future-ready workforces.",
+},
+  ],
+
+  lookingAhead:
+    "India's next manufacturing milestone will depend on turning workforce participation into long-term capability. Organizations that combine hiring with development, retention and career progression can build stronger talent pipelines as the sector continues to expand.",
 
   takeaway:
-    "Hiring speed matters because every critical position connects to something larger: customers, revenue, delivery, capability or growth. The goal is not simply to hire faster, but to remove unnecessary delay without compromising quality.",
+    "India's electronics revolution is being powered by more than factories, investment and technology. Women are becoming an important part of the country's manufacturing capability, and the next challenge is ensuring that these opportunities become sustainable careers with room to develop, progress and lead.",
 },
+{
+  id: 13,
+
+  slug: "driving-india-automotive-growth-right-talent",
+
+  category: "Automotive & Mobility",
+
+  title:
+    "Driving India's Automotive Growth Through the Right Talent",
+
+  intro:
+    "India's automotive industry is being reshaped by electric vehicles, software-defined mobility, automation and smarter manufacturing. As organizations scale, their ability to find the right talent quickly and accurately is becoming a critical part of that transformation.",
+
+  readTime: "7 min read",
+
+  image: "/images/automotive-growth-wide.png",
+
+  imageType: "infographic",
+
+  heroImageSize: "article4wide",
+
+  heroTitleSize: "article4",
+
+  openingPerspective:
+    "India's automotive industry is moving beyond its traditional role as a manufacturing hub. Electric vehicles, digital engineering, automation and increasingly global supply chains are creating a more technology-driven ecosystem where engineering capability and workforce strength are becoming important competitive advantages.",
+
+  perspectiveInsight:
+    "As automotive businesses scale, the challenge is no longer simply finding people. It is finding the right capabilities at the speed required by production, innovation and growth.",
+
+  focusCard: {
+    label: "Automotive Lens",
+
+    title:
+      "The future of mobility will depend as much on the people designing, building and supporting it as on the technologies transforming the industry.",
+  },
+
+  capabilityCards: [
+    {
+      number: "01",
+      title: "Speed",
+      text:
+        "Identify relevant talent quickly so critical vacancies do not unnecessarily slow production, innovation or business expansion.",
+    },
+
+    {
+      number: "02",
+      title: "Accuracy",
+      text:
+        "Align talent with the technical requirements, business objectives and organizational context behind each role.",
+    },
+
+    {
+      number: "03",
+      title: "Quality",
+      text:
+        "Build teams around professionals who can contribute beyond an immediate vacancy and create long-term business value.",
+    },
+  ],
+
+  workplaceLens: {
+    label: "Talent Reality",
+
+    title:
+      "Automotive transformation requires capability across technology and traditional business functions at the same time.",
+
+    text:
+      "EV engineering, embedded software, battery technology and digital capabilities are expanding rapidly, while manufacturing, quality, supply chain, procurement, finance, HR, sales and leadership remain essential to operational performance.",
+  },
+
+  sections: [
+   {
+  heading: "The talent powering the automotive revolution",
+
+  text:
+    "Today's automotive ecosystem extends far beyond the assembly line. Electric vehicles, connected mobility and software-defined vehicles are creating demand for embedded software engineers, AI and machine learning specialists, ADAS engineers, EV powertrain experts, battery professionals and cybersecurity talent. As vehicles become more intelligent, the capabilities behind them are evolving just as quickly.",
+},
+
+{
+  heading: "Transformation needs more than technology talent",
+
+  text:
+    "Technology talent is only one side of automotive growth. Manufacturing operations, quality, supply chain, procurement, project management, finance, HR, sales, after-sales and dealer development continue to keep the business moving. Future-ready automotive organizations need these capabilities to strengthen alongside engineering, EV and digital expertise.",
+},
+
+{
+  heading: "Recruitment is becoming a business enabler",
+
+  text:
+    "In a fast-moving automotive market, every critical vacancy can have a wider business impact. Delayed hiring can affect production timelines, customer commitments, innovation and revenue. Organizations therefore need recruitment that moves with business demand — identifying the right talent quickly without compromising the quality of each hire.",
+},
+
+{
+  heading: "The right talent creates the capacity to scale",
+
+  text:
+    "As automotive organizations expand, they need talent across engineering, EV technologies, digital development, manufacturing, corporate functions and leadership at the same time. Proactive sourcing, market intelligence and focused evaluation can help businesses build these capabilities faster while maintaining the quality needed for long-term growth.",
+},
+  ],
+
+ lookingAhead:
+  "As India's automotive ecosystem advances across electric mobility, digital engineering and smart manufacturing, organizations that build the right capabilities early will be better prepared to innovate, scale and compete in the next phase of mobility.",
+
+takeaway:
+  "India's automotive transformation will ultimately be powered by the people behind it. Building strong teams across technology, engineering, manufacturing and business functions — with speed, accuracy and quality — will help organizations turn the future of mobility into sustainable growth.",
+},
+
 ];

@@ -43,178 +43,228 @@ function ArticleDetail() {
 {/* HERO */}
 <section className="relative overflow-hidden bg-[#080b0b] text-white">
 
-  {/* Background atmosphere */}
+  {/* Background Atmosphere */}
   <div className="pointer-events-none absolute inset-0">
-    <div className="absolute -right-40 -top-32 h-[520px] w-[520px] rounded-full bg-emerald-300/[0.06] blur-[150px]" />
+    <div className="absolute -right-32 -top-28 h-[460px] w-[460px] rounded-full bg-emerald-300/[0.05] blur-[145px]" />
 
-    <div className="absolute bottom-[-190px] left-[14%] h-[380px] w-[380px] rounded-full bg-white/[0.018] blur-[120px]" />
+    <div className="absolute -bottom-40 left-[18%] h-[320px] w-[320px] rounded-full bg-emerald-300/[0.025] blur-[120px]" />
   </div>
 
-  <div className="relative z-10 mx-auto max-w-7xl px-6 pt-9 md:px-8 md:pt-11">
+  <div className="relative z-10 mx-auto max-w-7xl px-6 pb-10 pt-8 md:px-8 md:pb-12 md:pt-9">
 
-    {/* Top Navigation */}
-    <div className="flex items-center justify-between">
+    {/* TOP NAVIGATION */}
+    <div className="flex items-center justify-between gap-5">
+
       <Link
-        to="/"
-        className="group inline-flex items-center gap-3 text-[9px] uppercase tracking-[0.22em] text-white/45 transition-colors hover:text-white"
+        to="/#business-industry"
+        className="group inline-flex items-center gap-3 text-[9px] font-medium uppercase tracking-[0.21em] text-white/45 transition-colors hover:text-white"
       >
         <span className="transition-transform duration-300 group-hover:-translate-x-1">
           ←
         </span>
 
-        Back to Home
+        Back to Articles
       </Link>
 
-      <p className="hidden text-[8px] uppercase tracking-[0.22em] text-white/25 md:block">
-        Minivel Editorial / {article.readTime}
-      </p>
+      <div className="hidden items-center gap-2.5 md:flex">
+
+        <span className="h-1.5 w-1.5 rounded-full bg-emerald-300/60" />
+
+        <p className="text-[8px] uppercase tracking-[0.19em] text-white/30">
+          Minivel · {article.readTime}
+        </p>
+
+      </div>
+
     </div>
 
-    {/* Main Hero */}
-    <div className="grid gap-10 pb-12 pt-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:gap-14 lg:pb-14">
+    {/* MAIN HERO */}
+    <div className="mt-7 grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-10">
 
-      {/* Left Content */}
-      <div className="flex flex-col justify-between py-2">
+      {/* LEFT CONTENT */}
+      <div className="min-w-0">
 
-        <div>
+        {/* Category */}
+        <div className="flex items-center gap-3">
 
-          {/* Category */}
+          <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-300" />
+
+          <p className="text-[9px] font-semibold uppercase tracking-[0.23em] text-emerald-300/80">
+            {article.category}
+          </p>
+
+        </div>
+
+        {/* Title */}
+<h1
+  className={`mt-5 font-semibold tracking-[-0.045em] text-white ${
+    article.heroTitleSize === "large"
+      ? "max-w-[720px] text-[46px] leading-[1.01] md:text-[56px] lg:text-[64px]"
+      : article.heroTitleSize === "article3"
+? "max-w-[760px] text-[38px] leading-[1.01] md:text-[46px] lg:text-[50px]"
+      : "max-w-[650px] text-[42px] leading-[1.01] md:text-[50px] lg:text-[56px]"
+  }`}
+>
+  {article.title}
+</h1>
+
+        {/* Intro */}
+        <p
+  className={`mt-5 leading-[1.7] text-white/52 ${
+    article.heroTitleSize === "large"
+      ? "max-w-[640px] text-[16px] md:text-[17px]"
+      : "max-w-[590px] text-[15px] md:text-[16px]"
+  }`}
+>
+  {article.intro}
+</p>
+        {/* ARTICLE META */}
+        <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-4">
+
+          {/* Publisher */}
           <div className="flex items-center gap-3">
-            <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-300" />
 
-            <p className="text-[9px] font-medium uppercase tracking-[0.24em] text-emerald-300/75">
-              {article.category}
-            </p>
-          </div>
-
-          {/* Title */}
-          <h1 className="mt-6 max-w-3xl text-[42px] font-medium leading-[1] tracking-[-0.045em] md:text-[55px] lg:text-[60px]">
-            {article.title}
-          </h1>
-
-          {/* Intro */}
-          <p className="mt-6 max-w-xl text-[15px] leading-[1.75] text-white/52 md:text-[17px]">
-            {article.intro}
-          </p>
-
-        </div>
-
-        {/* Publisher */}
-        <div className="mt-10">
-          <p className="text-[8px] uppercase tracking-[0.2em] text-white/25">
-            Published By
-          </p>
-
-          <div className="mt-2 flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-300/70" />
-
-            <p className="text-[12px] text-white/60">
-              Minivel Editorial
-            </p>
-          </div>
-        </div>
-
-      </div>
-
-      {/* Hero Image */}
-      <div
-        className={`group relative overflow-hidden rounded-[26px] ${
-          article.imageType === "infographic"
-            ? "min-h-[460px] bg-[#f4f6f2] md:min-h-[520px] lg:min-h-[560px]"
-            : "min-h-[420px] md:min-h-[520px]"
-        }`}
-      >
-        <img
-          src={article.image}
-          alt={article.title}
-          className={`absolute inset-0 h-full w-full transition-transform duration-[1200ms] ease-out ${
-            article.imageType === "infographic"
-              ? "object-contain object-center p-8 md:p-10 lg:p-12"
-              : "object-cover group-hover:scale-[1.025]"
-          }`}
-        />
-
-        {/* Normal Article Image */}
-        {article.imageType !== "infographic" && (
-          <>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/5 to-transparent" />
-
-            <div className="absolute left-5 top-5">
-              <div className="rounded-full border border-white/15 bg-black/25 px-3 py-1.5 backdrop-blur-md">
-                <p className="text-[8px] uppercase tracking-[0.2em] text-white/70">
-                  Featured Perspective
-                </p>
-              </div>
+            <div className="flex h-9 w-9 items-center justify-center rounded-full border border-emerald-300/20 bg-emerald-300/[0.045]">
+              <span className="text-[12px] font-semibold text-emerald-300/85">
+                M
+              </span>
             </div>
 
-            <div className="absolute bottom-0 left-0 right-0 p-6">
-              <p className="text-[8px] uppercase tracking-[0.2em] text-emerald-200/75">
-                People · Business · Work
+            <div>
+              <p className="text-[7px] uppercase tracking-[0.19em] text-white/25">
+                Published By
               </p>
 
-              <p className="mt-2 max-w-md text-[16px] font-medium leading-[1.4] text-white/82">
-                Looking beyond individual trends to understand the forces
-                reshaping work.
+              <p className="mt-1 text-[11px] font-medium text-white/65">
+                Minivel
               </p>
             </div>
-          </>
-        )}
 
-        {/* Minivel Infographic */}
-        {article.imageType === "infographic" && (
-          <div className="absolute left-5 top-5">
-            <span className="rounded-full border border-black/[0.08] bg-white/90 px-3 py-1.5 text-[8px] uppercase tracking-[0.2em] text-black/45 backdrop-blur-md">
-              Minivel Editorial
+          </div>
+
+          {/* Read Time */}
+          <div className="flex items-center gap-2.5">
+
+            <span className="flex h-8 w-8 items-center justify-center rounded-full border border-white/[0.08] bg-white/[0.025] text-[11px] text-emerald-300/70">
+              ◷
             </span>
+
+            <div>
+              <p className="text-[7px] uppercase tracking-[0.18em] text-white/22">
+                Reading Time
+              </p>
+
+              <p className="mt-1 text-[11px] text-white/55">
+                {article.readTime}
+              </p>
+            </div>
+
           </div>
-        )}
+
+        </div>
 
       </div>
-    </div>
-  </div>
-</section>
 
+      {/* RIGHT IMAGE */}
+      <div className="flex w-full items-center justify-center">
+
+        <div
+          className={`relative w-full overflow-hidden rounded-[26px] ${
+            article.heroImageSize === "compact"
+              ? "flex items-center justify-center"
+              : ""
+          }`}
+        >
+
+          <img
+            src={article.image}
+            alt={article.title}
+          className={
+  article.heroImageSize === "compact"
+    ? "block h-auto w-[82%] max-w-[430px] rounded-[26px]"
+    : article.heroImageSize === "article3"
+    ? "block h-auto w-[86%] max-w-[540px] rounded-[26px]"
+  : article.heroImageSize === "article4"
+? "block h-[470px] w-full max-w-[620px] rounded-[22px] object-contain object-center"
+    : "block h-auto w-full"
+}
+          />
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 {/* OPENING PERSPECTIVE */}
 <section className="bg-[#edf0ed] text-[#111]">
-  <div className="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-20">
+  <div className="mx-auto max-w-7xl px-6 py-14 md:px-8 md:py-16">
 
-    {/* Perspective Header */}
-    <div className="flex items-center justify-between border-b border-black/10 pb-4">
+    {/* Section Header */}
+    <div className="flex items-center gap-3">
+      <span className="h-1.5 w-1.5 rounded-full bg-emerald-700" />
 
-      <div className="flex items-center gap-3">
-        <span className="h-1.5 w-1.5 rounded-full bg-emerald-700" />
-
-        <p className="text-[9px] uppercase tracking-[0.24em] text-emerald-900/60">
-          The Perspective
-        </p>
-      </div>
-
-      <p className="hidden text-[9px] uppercase tracking-[0.2em] text-black/30 md:block">
-        Minivel Editorial
+      <p className="text-[9px] font-semibold uppercase tracking-[0.24em] text-emerald-900/60">
+        Opening Perspective
       </p>
-
     </div>
 
-    {/* Main Perspective */}
-    <div className="mt-10 max-w-5xl">
+    {/* Main Content */}
+    <div className="mt-8 grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:gap-14">
 
-      <p className="text-[27px] font-medium leading-[1.38] tracking-[-0.03em] text-black/80 md:text-[34px] lg:text-[38px]">
-        {article.openingPerspective}
-      </p>
-
-      {/* Why It Matters */}
-      <div className="mt-10 grid gap-5 border-t border-black/10 pt-6 md:grid-cols-[160px_1fr]">
-
-        <p className="text-[9px] uppercase tracking-[0.22em] text-black/35">
-          Why It Matters
+      {/* LEFT */}
+      <div>
+        <p className="text-[9px] font-medium uppercase tracking-[0.2em] text-black/35">
+          The Bigger Picture
         </p>
 
-        <p className="max-w-2xl text-[14px] leading-[1.8] text-black/50 md:text-[15px]">
-          {article.perspectiveInsight ||
-            "Understanding the wider business context helps turn individual workforce decisions into more informed long-term choices."}
+        <h2 className="mt-4 max-w-[390px] text-[30px] font-semibold leading-[1.08] tracking-[-0.04em] text-black/85 md:text-[36px]">
+          Understanding what is really changing.
+        </h2>
+      </div>
+
+      {/* RIGHT */}
+      <div>
+        <p className="max-w-[720px] text-[18px] font-medium leading-[1.7] tracking-[-0.015em] text-black/70 md:text-[20px]">
+          {article.openingPerspective}
         </p>
 
+        {/* Insight */}
+         <div
+  className="
+    group relative mt-7 overflow-hidden
+    rounded-[18px]
+    bg-[#0b1512]
+    px-6 py-6
+    transition-all duration-300
+    hover:-translate-y-1
+    hover:bg-[#101c18]
+    hover:shadow-[0_18px_45px_rgba(0,0,0,0.16)]
+    md:px-7 md:py-7
+  "
+>
+
+          <div className="absolute -right-16 -top-16 h-36 w-36 rounded-full bg-emerald-300/[0.08] blur-[55px]" />
+
+          <div className="relative z-10">
+            <div className="flex items-center gap-3">
+
+              <p className="text-[8px] font-semibold uppercase tracking-[0.22em] text-emerald-300/70">
+                Why It Matters
+              </p>
+            </div>
+
+            <p className="mt-4 max-w-[650px] text-[15px] leading-[1.75] text-white/65 md:text-[16px]">
+              {article.perspectiveInsight ||
+                "Understanding the wider business context helps turn individual workforce decisions into more informed long-term choices."}
+            </p>
+          </div>
+
+        </div>
       </div>
 
     </div>
@@ -225,86 +275,85 @@ function ArticleDetail() {
 {/* SECTION 01 */}
 {article.sections[0] && (
   <section className="bg-[#dfe4df] text-[#111]">
-    <div className="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-20">
+    <div className="mx-auto max-w-7xl px-6 py-14 md:px-8 md:py-16">
 
       {/* Section Meta */}
       <div className="flex items-center justify-between">
-
-        <div className="flex items-center gap-4">
-
-          <span className="text-[10px] font-medium text-black/30">
+        <div className="flex items-center gap-3">
+          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-black/[0.045] text-[9px] font-medium text-black/45">
             01
           </span>
 
-          <p className="text-[9px] uppercase tracking-[0.23em] text-emerald-900/60">
+          <p className="text-[9px] font-semibold uppercase tracking-[0.22em] text-emerald-900/60">
             Business & People
           </p>
-
         </div>
 
-        <p className="hidden text-[9px] uppercase tracking-[0.2em] text-black/25 md:block">
+        <p className="hidden text-[8px] uppercase tracking-[0.2em] text-black/25 md:block">
           Growth & Capability
         </p>
-
       </div>
 
-      {/* Main Section Layout */}
-      <div className="mt-10 grid gap-12 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-16">
+      {/* Main Layout */}
+      <div className="mt-8 grid gap-9 lg:grid-cols-[minmax(0,1fr)_330px] lg:gap-12">
 
         {/* Main Content */}
         <div className="min-w-0">
-
-          <h2 className="max-w-3xl text-[34px] font-medium leading-[1.08] tracking-[-0.04em] md:text-[44px] lg:text-[48px]">
+          <h2 className="max-w-3xl text-[32px] font-semibold leading-[1.08] tracking-[-0.04em] text-black/88 md:text-[40px] lg:text-[44px]">
             {article.sections[0].heading}
           </h2>
 
-          <div className="mt-8 grid gap-4 md:grid-cols-[120px_minmax(0,1fr)] md:gap-8">
-
-            <p className="text-[9px] uppercase tracking-[0.2em] text-black/30">
+          <div className="mt-6 grid gap-4 md:grid-cols-[110px_minmax(0,1fr)] md:gap-7">
+            <p className="text-[8px] font-semibold uppercase tracking-[0.2em] text-black/30">
               The Reality
             </p>
 
-            <p className="max-w-2xl text-[15px] leading-[1.85] text-black/58 md:text-[16px]">
+            <p className="max-w-2xl text-[15px] leading-[1.8] text-black/58 md:text-[16px]">
               {article.sections[0].text}
             </p>
-
           </div>
-
         </div>
 
-        {/* Growth Lens */}
+        {/* Focus Card */}
         {article.focusCard && (
           <aside className="min-w-0 lg:self-start">
-
-            <div className="relative overflow-hidden rounded-[24px] bg-[#0d1210] p-7 text-white md:p-8">
-
-              {/* Soft Atmosphere */}
-              <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-emerald-300/[0.07] blur-[65px]" />
+            <div
+              className="
+                group relative overflow-hidden
+                rounded-[22px]
+                bg-[#0d1210]
+                p-6 text-white
+                transition-all duration-300
+                hover:-translate-y-1
+                hover:bg-[#111916]
+                hover:shadow-[0_18px_45px_rgba(0,0,0,0.16)]
+                md:p-7
+              "
+            >
+              {/* Soft atmosphere */}
+              <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-emerald-300/[0.06] blur-[65px] transition-all duration-500 group-hover:bg-emerald-300/[0.09]" />
 
               <div className="relative z-10">
-
                 {/* Label */}
                 <div className="flex items-center gap-3">
-                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-300" />
+                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-300 transition-transform duration-300 group-hover:scale-125" />
 
-                  <p className="text-[9px] uppercase tracking-[0.22em] text-emerald-300/70">
+                  <p className="text-[8px] font-semibold uppercase tracking-[0.22em] text-emerald-300/70">
                     {article.focusCard.label}
                   </p>
                 </div>
 
                 {/* Insight */}
-                <p className="mt-7 text-[21px] font-medium leading-[1.48] tracking-[-0.025em] text-white/85 md:text-[23px]">
+                <p className="mt-6 text-[20px] font-medium leading-[1.45] tracking-[-0.025em] text-white/88 md:text-[22px]">
                   {article.focusCard.title}
                 </p>
 
-                {/* Attribution */}
-                <p className="mt-8 text-[8px] uppercase tracking-[0.2em] text-white/30">
-                  Minivel Insight
+                {/* Footer */}
+                <p className="mt-7 text-[8px] uppercase tracking-[0.18em] text-white/28">
+                  Key Insight
                 </p>
-
               </div>
             </div>
-
           </aside>
         )}
 
@@ -316,38 +365,40 @@ function ArticleDetail() {
 {/* SECTION 02 */}
 {article.sections[1] && (
   <section className="bg-[#edf0ed] text-[#111]">
-    <div className="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-20">
+    <div className="mx-auto max-w-7xl px-6 py-14 md:px-8 md:py-16">
 
       {/* Section Meta */}
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          <span className="text-[10px] font-medium text-black/30">
+        <div className="flex items-center gap-3">
+
+          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-black/[0.045] text-[9px] font-medium text-black/45">
             02
           </span>
 
-          <p className="text-[9px] uppercase tracking-[0.23em] text-emerald-900/60">
+          <p className="text-[9px] font-semibold uppercase tracking-[0.22em] text-emerald-900/60">
             Capability & Growth
           </p>
+
         </div>
 
-        <p className="hidden text-[9px] uppercase tracking-[0.2em] text-black/25 md:block">
+        <p className="hidden text-[8px] uppercase tracking-[0.2em] text-black/25 md:block">
           Access & Execution
         </p>
       </div>
 
       {/* Main Introduction */}
-      <div className="mt-10 grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16">
+      <div className="mt-8 grid gap-7 lg:grid-cols-[0.72fr_1.28fr] lg:gap-12">
 
         {/* Heading */}
         <div>
-          <h2 className="max-w-xl text-[34px] font-medium leading-[1.08] tracking-[-0.04em] md:text-[44px] lg:text-[48px]">
+          <h2 className="max-w-xl text-[32px] font-semibold leading-[1.08] tracking-[-0.04em] text-black/88 md:text-[40px] lg:text-[44px]">
             {article.sections[1].heading}
           </h2>
         </div>
 
         {/* Main Text */}
         <div className="lg:pt-1">
-          <p className="max-w-2xl text-[15px] leading-[1.85] text-black/58 md:text-[16px]">
+          <p className="max-w-2xl text-[15px] leading-[1.8] text-black/58 md:text-[16px]">
             {article.sections[1].text}
           </p>
         </div>
@@ -355,78 +406,91 @@ function ArticleDetail() {
       </div>
 
       {/* Capability Cards */}
-{article.capabilityCards && (
-  <div className="mt-10 grid gap-4 md:grid-cols-3">
+      {article.capabilityCards && (
+        <div className="mt-8 grid items-stretch gap-4 md:grid-cols-3">
 
-    {article.capabilityCards.map((item) => (
-      <article
-        key={item.number}
-        className="group relative overflow-hidden rounded-[20px] border border-black/[0.07] bg-white/75 p-5 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_16px_40px_rgba(0,0,0,0.07)] md:p-6"
-      >
+          {article.capabilityCards.map((item) => (
+            <article
+              key={item.number}
+              className="
+                group relative flex h-full min-h-[220px] flex-col
+                overflow-hidden rounded-[20px]
+                border border-black/[0.06]
+                bg-white/75
+                p-5
+                transition-all duration-300
+                hover:-translate-y-1
+                hover:bg-white
+                hover:shadow-[0_16px_40px_rgba(0,0,0,0.07)]
+                md:p-6
+              "
+            >
+              {/* Soft Hover Atmosphere */}
+              <div className="pointer-events-none absolute -right-12 -top-12 h-32 w-32 rounded-full bg-emerald-700/0 blur-[50px] transition-all duration-500 group-hover:bg-emerald-700/[0.06]" />
 
-        {/* Subtle hover atmosphere */}
-        <div className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-emerald-700/0 blur-[45px] transition-all duration-500 group-hover:bg-emerald-700/[0.06]" />
+              <div className="relative z-10 flex h-full flex-col">
 
-        <div className="relative z-10">
+                {/* Card Header */}
+                <div className="flex items-center justify-between gap-4">
 
-          {/* Card Top */}
-          <div className="flex items-center justify-between gap-4">
+                  <p className="text-[8px] font-semibold uppercase tracking-[0.19em] text-emerald-900/50">
+                    Core Requirement
+                  </p>
 
-            <p className="text-[8px] uppercase tracking-[0.2em] text-emerald-900/50">
-              Core Requirement
-            </p>
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-black/[0.035] text-[8px] font-medium text-black/25 transition-all duration-300 group-hover:bg-emerald-800/[0.07] group-hover:text-emerald-900/55">
+                    {item.number}
+                  </span>
 
-            <span className="text-[10px] font-medium text-black/20 transition-colors duration-300 group-hover:text-emerald-800/55">
-              {item.number}
-            </span>
+                </div>
 
-          </div>
+                {/* Card Content */}
+                <div className="mt-6">
 
-          {/* Main Content */}
-          <div className="mt-7">
+                  <h3 className="text-[21px] font-semibold leading-[1.15] tracking-[-0.025em] text-black/78">
+                    {item.title}
+                  </h3>
 
-            <h3 className="text-[22px] font-medium leading-[1.15] tracking-[-0.025em] text-black/78">
-              {item.title}
-            </h3>
+                  <p className="mt-3 text-[13px] leading-[1.7] text-black/45">
+                    {item.text}
+                  </p>
 
-            <p className="mt-3 text-[13px] leading-[1.7] text-black/45">
-              {item.text}
-            </p>
+                </div>
 
-          </div>
+                {/* Bottom Detail */}
+                <div className="mt-auto flex items-center gap-2 pt-5">
 
-          {/* Bottom Detail */}
-          <div className="mt-5 flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-700/35 transition-all duration-300 group-hover:scale-125 group-hover:bg-emerald-700" />
 
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-700/35 transition-all duration-300 group-hover:scale-125 group-hover:bg-emerald-700" />
+                  <p className="text-[8px] uppercase tracking-[0.18em] text-black/25 transition-colors duration-300 group-hover:text-black/40">
+                    Key Capability
+                  </p>
 
-            <p className="text-[8px] uppercase tracking-[0.18em] text-black/25 transition-colors duration-300 group-hover:text-black/40">
-              Minivel Insight
-            </p>
+                </div>
 
-          </div>
+              </div>
+            </article>
+          ))}
 
         </div>
-
-      </article>
-    ))}
-
-  </div>
-)}
+      )}
 
       {/* Closing Insight */}
       {article.capabilityCards && (
-        <div className="mt-9 grid gap-4 md:grid-cols-[0.3fr_0.7fr]">
+        <div className="mt-8 rounded-[18px] bg-black/[0.035] px-6 py-5 md:px-7">
 
-          <p className="text-[9px] uppercase tracking-[0.22em] text-black/30">
-            The Principle
-          </p>
+          <div className="grid gap-3 md:grid-cols-[130px_1fr] md:gap-8">
 
-          <p className="max-w-2xl text-[15px] font-medium leading-[1.7] tracking-[-0.01em] text-black/55">
-            Growth becomes easier to support when access to talent, hiring
-            speed and long-term fit are considered together rather than as
-            separate recruitment decisions.
-          </p>
+            <p className="text-[8px] font-semibold uppercase tracking-[0.2em] text-emerald-900/50">
+              The Principle
+            </p>
+
+            <p className="max-w-3xl text-[14px] font-medium leading-[1.7] tracking-[-0.01em] text-black/55 md:text-[15px]">
+              Growth becomes easier to support when access to talent, hiring
+              speed and long-term fit are considered together rather than as
+              separate recruitment decisions.
+            </p>
+
+          </div>
 
         </div>
       )}
@@ -435,47 +499,47 @@ function ArticleDetail() {
   </section>
 )}
 
-    {/* SECTION 03 */}
+{/* SECTION 03 */}
 {article.sections[2] && (
   <section className="bg-[#e2e7e3] text-[#111]">
-    <div className="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-20">
+    <div className="mx-auto max-w-7xl px-6 py-14 md:px-8 md:py-16">
 
       {/* Section Meta */}
       <div className="flex items-center justify-between">
+        <div className="flex items-center gap-3">
 
-        <div className="flex items-center gap-4">
-          <span className="text-[10px] font-medium text-black/30">
+          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-black/[0.045] text-[9px] font-medium text-black/45">
             03
           </span>
 
-          <p className="text-[9px] uppercase tracking-[0.23em] text-emerald-900/60">
+          <p className="text-[9px] font-semibold uppercase tracking-[0.22em] text-emerald-900/60">
             People & Opportunity
           </p>
+
         </div>
 
-        <p className="hidden text-[9px] uppercase tracking-[0.2em] text-black/25 md:block">
+        <p className="hidden text-[8px] uppercase tracking-[0.2em] text-black/25 md:block">
           Workplace & Growth
         </p>
-
       </div>
 
       {/* Main Layout */}
-      <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_390px] lg:items-start lg:gap-16">
+      <div className="mt-8 grid gap-9 lg:grid-cols-[minmax(0,1fr)_350px] lg:items-start lg:gap-12">
 
         {/* Main Article Content */}
         <div className="min-w-0">
 
-          <h2 className="max-w-3xl text-[34px] font-medium leading-[1.08] tracking-[-0.04em] md:text-[44px] lg:text-[48px]">
+          <h2 className="max-w-3xl text-[32px] font-semibold leading-[1.08] tracking-[-0.04em] text-black/88 md:text-[40px] lg:text-[44px]">
             {article.sections[2].heading}
           </h2>
 
-          <div className="mt-8 grid gap-4 md:grid-cols-[120px_minmax(0,1fr)] md:gap-8">
+          <div className="mt-6 grid gap-4 md:grid-cols-[110px_minmax(0,1fr)] md:gap-7">
 
-            <p className="text-[9px] uppercase tracking-[0.2em] text-black/30">
+            <p className="text-[8px] font-semibold uppercase tracking-[0.2em] text-black/30">
               The Shift
             </p>
 
-            <p className="max-w-2xl text-[15px] leading-[1.85] text-black/58 md:text-[16px]">
+            <p className="max-w-2xl text-[15px] leading-[1.8] text-black/58 md:text-[16px]">
               {article.sections[2].text}
             </p>
 
@@ -487,47 +551,52 @@ function ArticleDetail() {
         {article.workplaceLens && (
           <aside className="min-w-0">
 
-            <div className="group relative overflow-hidden rounded-[24px] bg-[#101514] p-7 text-white shadow-[0_16px_45px_rgba(0,0,0,0.10)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(0,0,0,0.14)] md:p-8">
-
+            <div
+              className="
+                group relative overflow-hidden
+                rounded-[22px]
+                bg-[#101514]
+                p-6 text-white
+                transition-all duration-300
+                hover:-translate-y-1
+                hover:bg-[#131b18]
+                hover:shadow-[0_18px_48px_rgba(0,0,0,0.15)]
+                md:p-7
+              "
+            >
               {/* Soft atmosphere */}
-              <div className="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full bg-emerald-300/[0.06] blur-[75px]" />
+              <div className="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full bg-emerald-300/[0.06] blur-[75px] transition-all duration-500 group-hover:bg-emerald-300/[0.09]" />
 
               <div className="relative z-10">
 
                 {/* Label */}
-                <div className="flex items-center justify-between gap-4">
+                <div className="flex items-center gap-3">
 
-                  <div className="flex items-center gap-3">
-                    <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-300" />
+                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-300 transition-transform duration-300 group-hover:scale-125" />
 
-                    <p className="text-[9px] uppercase tracking-[0.22em] text-emerald-300/70">
-                      {article.workplaceLens.label || "Workplace Lens"}
-                    </p>
-                  </div>
-
-                  <span className="text-[10px] font-medium text-white/20">
-                    03
-                  </span>
+                  <p className="text-[8px] font-semibold uppercase tracking-[0.22em] text-emerald-300/70">
+                    {article.workplaceLens.label || "Workplace Lens"}
+                  </p>
 
                 </div>
 
                 {/* Main Insight */}
-                <p className="mt-7 text-[22px] font-medium leading-[1.38] tracking-[-0.025em] text-white/85 md:text-[24px]">
+                <p className="mt-6 text-[21px] font-medium leading-[1.4] tracking-[-0.025em] text-white/88 md:text-[23px]">
                   {article.workplaceLens.title}
                 </p>
 
                 {/* Supporting Text */}
-                <p className="mt-5 text-[13px] leading-[1.75] text-white/42 md:text-[14px]">
+                <p className="mt-4 text-[13px] leading-[1.7] text-white/42 md:text-[14px]">
                   {article.workplaceLens.text}
                 </p>
 
-                {/* Bottom */}
-                <div className="mt-7 flex items-center gap-2">
+                {/* Bottom Label */}
+                <div className="mt-6 flex items-center gap-2">
 
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-300/55 transition-transform duration-300 group-hover:scale-125" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-300/45 transition-all duration-300 group-hover:scale-125 group-hover:bg-emerald-300" />
 
-                  <p className="text-[8px] uppercase tracking-[0.18em] text-white/30">
-                    Minivel Insight
+                  <p className="text-[8px] uppercase tracking-[0.18em] text-white/28">
+                    Key Observation
                   </p>
 
                 </div>
@@ -546,43 +615,63 @@ function ArticleDetail() {
 {/* SECTION 04 */}
 {article.sections[3] && (
   <section className="bg-[#edf0ed] text-[#111]">
-    <div className="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-20">
+    <div className="mx-auto max-w-7xl px-6 py-14 md:px-8 md:py-16">
 
       {/* Section Meta */}
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          <span className="text-[10px] font-medium text-black/30">
+
+        <div className="flex items-center gap-3">
+
+          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-black/[0.045] text-[9px] font-medium text-black/45">
             04
           </span>
 
-          <p className="text-[9px] uppercase tracking-[0.23em] text-emerald-900/60">
+          <p className="text-[9px] font-semibold uppercase tracking-[0.22em] text-emerald-900/60">
             Bringing It Together
           </p>
+
         </div>
 
-        <p className="hidden text-[9px] uppercase tracking-[0.2em] text-black/25 md:block">
+        <p className="hidden text-[8px] uppercase tracking-[0.2em] text-black/25 md:block">
           Long-Term Value
         </p>
+
       </div>
 
       {/* Main Content */}
-      <div className="mt-10 grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16">
+      <div className="mt-8 grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:gap-12">
 
         {/* Heading */}
         <div>
-          <h2 className="max-w-xl text-[34px] font-medium leading-[1.08] tracking-[-0.04em] md:text-[44px] lg:text-[48px]">
+
+          <h2 className="max-w-xl text-[32px] font-semibold leading-[1.08] tracking-[-0.04em] text-black/88 md:text-[40px] lg:text-[44px]">
             {article.sections[3].heading}
           </h2>
+
         </div>
 
         {/* Article Text */}
         <div className="lg:pt-1">
-          <p className="max-w-2xl text-[15px] leading-[1.85] text-black/58 md:text-[16px]">
+
+          <p className="max-w-2xl text-[15px] leading-[1.8] text-black/58 md:text-[16px]">
             {article.sections[3].text}
           </p>
 
           {/* Looking Ahead Card */}
-          <div className="group relative mt-8 overflow-hidden rounded-[22px] border border-black/[0.05] bg-white/65 p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_16px_45px_rgba(0,0,0,0.07)] md:p-7">
+          <div
+            className="
+              group relative mt-7 overflow-hidden
+              rounded-[20px]
+              border border-black/[0.05]
+              bg-white/70
+              p-6
+              transition-all duration-300
+              hover:-translate-y-1
+              hover:bg-white
+              hover:shadow-[0_16px_42px_rgba(0,0,0,0.07)]
+              md:p-7
+            "
+          >
 
             {/* Soft Hover Atmosphere */}
             <div className="pointer-events-none absolute -right-12 -top-12 h-32 w-32 rounded-full bg-emerald-700/0 blur-[50px] transition-all duration-500 group-hover:bg-emerald-700/[0.06]" />
@@ -591,31 +680,35 @@ function ArticleDetail() {
 
               {/* Label */}
               <div className="flex items-center gap-3">
-                <span className="h-1.5 w-1.5 rounded-full bg-emerald-700/60 transition-all duration-300 group-hover:scale-125 group-hover:bg-emerald-700" />
 
-                <p className="text-[8px] uppercase tracking-[0.21em] text-emerald-900/55 transition-colors duration-300 group-hover:text-emerald-900/75">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-700/55 transition-all duration-300 group-hover:scale-125 group-hover:bg-emerald-700" />
+
+                <p className="text-[8px] font-semibold uppercase tracking-[0.21em] text-emerald-900/55 transition-colors duration-300 group-hover:text-emerald-900/75">
                   Looking Ahead
                 </p>
+
               </div>
 
               {/* Statement */}
-              <p className="mt-5 max-w-xl text-[18px] font-medium leading-[1.55] tracking-[-0.02em] text-black/65 transition-colors duration-300 group-hover:text-black/75 md:text-[20px]">
+              <p className="mt-5 max-w-xl text-[18px] font-medium leading-[1.5] tracking-[-0.02em] text-black/65 transition-colors duration-300 group-hover:text-black/75 md:text-[20px]">
                 {article.lookingAhead ||
                   "Sustainable workforce decisions connect immediate business needs with the capability the organization will need next."}
               </p>
 
-              {/* Footer */}
-              {/* Footer */}
-<div className="mt-6">
-  <p className="text-[8px] uppercase tracking-[0.18em] text-black/25 transition-colors duration-300 group-hover:text-emerald-900/45">
-    Minivel Perspective
-  </p>
-</div>
+              {/* Bottom Label */}
+              <div className="mt-5">
+
+                <p className="text-[8px] uppercase tracking-[0.18em] text-black/25 transition-colors duration-300 group-hover:text-emerald-900/45">
+                  Forward View
+                </p>
+
+              </div>
 
             </div>
           </div>
 
         </div>
+
       </div>
     </div>
   </section>
@@ -627,9 +720,7 @@ function ArticleDetail() {
 
   {/* Background Atmosphere */}
   <div className="pointer-events-none absolute inset-0">
-    <div className="absolute -bottom-40 -right-32 h-[380px] w-[380px] rounded-full bg-emerald-300/[0.05] blur-[130px]" />
-
-    <div className="absolute -left-32 top-[-100px] h-[280px] w-[280px] rounded-full bg-white/[0.018] blur-[110px]" />
+    <div className="absolute -bottom-36 -right-28 h-[340px] w-[340px] rounded-full bg-emerald-300/[0.05] blur-[120px]" />
   </div>
 
   <div className="relative z-10 mx-auto max-w-7xl px-6 py-14 md:px-8 md:py-16">
@@ -640,38 +731,39 @@ function ArticleDetail() {
       <div className="flex items-center gap-3">
         <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" />
 
-        <p className="text-[9px] uppercase tracking-[0.24em] text-emerald-300/65">
+        <p className="text-[9px] font-semibold uppercase tracking-[0.23em] text-emerald-300/70">
           Key Takeaway
         </p>
       </div>
 
-      <p className="hidden text-[9px] uppercase tracking-[0.2em] text-white/25 md:block">
+      <p className="hidden text-[8px] uppercase tracking-[0.2em] text-white/25 md:block">
         The Bottom Line
       </p>
 
     </div>
 
-    {/* Takeaway Content */}
-    <div className="mt-8 grid gap-6 lg:grid-cols-[150px_1fr] lg:gap-10">
+    {/* Main Takeaway */}
+    <div className="mt-8 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-16">
+
+      <p className="text-[8px] font-medium uppercase tracking-[0.2em] text-white/25">
+        In One Thought
+      </p>
 
       <div>
-        <p className="text-[8px] uppercase tracking-[0.2em] text-white/25">
-          In One Thought
-        </p>
-      </div>
 
-      <div>
-
-        <p className="max-w-4xl text-[23px] font-medium leading-[1.4] tracking-[-0.025em] text-white/85 md:text-[29px] lg:text-[32px]">
+        <p className="max-w-4xl text-[22px] font-medium leading-[1.42] tracking-[-0.025em] text-white/88 md:text-[27px] lg:text-[30px]">
           {article.takeaway}
         </p>
 
-        <div className="mt-7 flex items-center gap-2">
+        {/* Closing Marker */}
+        <div className="mt-6 flex items-center gap-2">
+
           <span className="h-1.5 w-1.5 rounded-full bg-emerald-300/60" />
 
-          <p className="text-[8px] uppercase tracking-[0.2em] text-white/30">
-            Minivel Editorial
+          <p className="text-[8px] uppercase tracking-[0.19em] text-white/30">
+            Final Thought
           </p>
+
         </div>
 
       </div>
@@ -682,69 +774,73 @@ function ArticleDetail() {
 </section>
 
 
-{/* RELATED STORIES */}
+{/* RELATED ARTICLES */}
 <section className="bg-[#edf0ed] text-[#111]">
-  <div className="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-20">
+  <div className="mx-auto max-w-7xl px-6 py-14 md:px-8 md:py-16">
 
-    {/* Related Header */}
-    <div className="flex items-end justify-between">
+    {/* Header */}
+    <div className="flex items-end justify-between gap-6">
 
       <div>
-        <p className="text-[9px] uppercase tracking-[0.22em] text-emerald-900/60">
-          Continue Reading
-        </p>
+        <div className="flex items-center gap-3">
+          <span className="h-1.5 w-1.5 rounded-full bg-emerald-700" />
 
-        <h2 className="mt-3 text-[30px] font-medium tracking-[-0.035em] md:text-[38px]">
-          Related perspectives.
+          <p className="text-[9px] font-semibold uppercase tracking-[0.22em] text-emerald-900/60">
+            Continue Reading
+          </p>
+        </div>
+
+        <h2 className="mt-3 text-[30px] font-semibold tracking-[-0.035em] text-black/88 md:text-[36px]">
+          Related Articles
         </h2>
       </div>
 
-      <p className="hidden text-[9px] uppercase tracking-[0.2em] text-black/25 md:block">
-        Minivel Editorial
+      <p className="hidden text-[8px] uppercase tracking-[0.2em] text-black/25 md:block">
+        More from Business & Industry
       </p>
 
     </div>
 
     {/* Related Cards */}
-    <div className="mt-9 grid gap-5 md:grid-cols-2">
+    <div className="mt-8 grid gap-4 md:grid-cols-2">
 
       {relatedArticles.map((item) => (
         <Link
           key={item.id}
           to={`/article/${item.slug}`}
-          className="group overflow-hidden rounded-[24px] border border-black/[0.06] bg-white/70 p-4 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_18px_50px_rgba(0,0,0,0.07)]"
+          className="
+            group
+            overflow-hidden
+            rounded-[22px]
+            border border-black/[0.06]
+            bg-white/75
+            p-4
+            transition-all duration-300
+            hover:-translate-y-1
+            hover:bg-white
+            hover:shadow-[0_18px_48px_rgba(0,0,0,0.07)]
+          "
         >
-
-          <div className="grid gap-5 sm:grid-cols-[175px_1fr]">
+          <div className="grid gap-5 sm:grid-cols-[170px_1fr]">
 
             {/* Image */}
-            <div className="relative min-h-[165px] overflow-hidden rounded-[18px] bg-[#e3e6e2]">
-
+            <div className="overflow-hidden rounded-[16px] bg-[#e4e8e4]">
               <img
                 src={item.image}
                 alt={item.title}
-                className={`absolute inset-0 h-full w-full transition-transform duration-700 ${
-                  item.imageType === "infographic"
-                    ? "object-contain p-3"
-                    : "object-cover group-hover:scale-[1.04]"
-                }`}
+                className="block h-full min-h-[160px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
               />
-
-              {item.imageType !== "infographic" && (
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-              )}
-
             </div>
 
             {/* Content */}
-            <div className="flex flex-col justify-between py-2">
+            <div className="flex flex-col justify-between py-1">
 
               <div>
-                <p className="text-[8px] uppercase tracking-[0.2em] text-emerald-900/60">
+                <p className="text-[8px] font-semibold uppercase tracking-[0.2em] text-emerald-900/60">
                   {item.category}
                 </p>
 
-                <h3 className="mt-3 text-[19px] font-semibold leading-[1.25] tracking-[-0.02em] text-black/80">
+                <h3 className="mt-3 text-[18px] font-semibold leading-[1.25] tracking-[-0.02em] text-black/82">
                   {item.title}
                 </h3>
 
@@ -755,11 +851,11 @@ function ArticleDetail() {
 
               <div className="mt-5 flex items-center justify-between">
 
-                <p className="text-[9px] uppercase tracking-[0.18em] text-black/35">
+                <p className="text-[8px] uppercase tracking-[0.18em] text-black/35">
                   {item.readTime}
                 </p>
 
-                <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black/10 text-black/60 transition-all duration-300 group-hover:bg-[#111] group-hover:text-white">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full border border-black/10 text-[12px] text-black/55 transition-all duration-300 group-hover:translate-x-1 group-hover:bg-[#111] group-hover:text-white">
                   →
                 </span>
 
@@ -774,15 +870,15 @@ function ArticleDetail() {
     </div>
 
     {/* Return Navigation */}
-    <div className="mt-10 flex justify-end">
+    <div className="mt-8 flex justify-end">
 
       <Link
-        to="/#featured-story"
-        className="group inline-flex items-center gap-4 text-[10px] uppercase tracking-[0.2em] text-black/50 transition-colors hover:text-black"
+        to="/#business-industry"
+        className="group inline-flex items-center gap-3 text-[9px] font-medium uppercase tracking-[0.2em] text-black/45 transition-colors hover:text-black"
       >
-        Back to News & Articles
+        Back to Articles
 
-        <span className="flex h-10 w-10 items-center justify-center rounded-full border border-black/15 transition-all duration-300 group-hover:translate-x-1 group-hover:bg-[#111] group-hover:text-white">
+        <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black/12 text-[12px] transition-all duration-300 group-hover:translate-x-1 group-hover:bg-[#111] group-hover:text-white">
           →
         </span>
       </Link>
