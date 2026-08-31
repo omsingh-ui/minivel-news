@@ -102,36 +102,7 @@ export const articlesData = [
     "Skills-first hiring is strongest when the organization understands the work first, looks for evidence that matters and leaves enough room to recognize potential that a resume alone may not reveal.",
 },
 
-  {
-    id: 2,
-    slug: "candidate-experience",
-    category: "Talent & Hiring",
-    title:
-      "Why candidate experience matters long before someone joins",
-    intro:
-      "Every stage of recruitment shapes how candidates understand an organization, from the first job description to the final decision.",
-    readTime: "5 min read",
-    image: "/images/article-2.jpg",
-    sections: [
-      {
-        heading: "The process communicates the culture",
-        text:
-          "Candidates form impressions through response times, clarity, interviews and follow-up. A thoughtful process can communicate professionalism and respect before the employment relationship even begins.",
-      },
-      {
-        heading: "Clarity reduces friction",
-        text:
-          "Clear role expectations, transparent timelines and practical communication help candidates make better decisions while reducing unnecessary uncertainty throughout the hiring process.",
-      },
-      {
-        heading: "Experience influences reputation",
-        text:
-          "Candidates may remember how they were treated even when they are not selected. Recruitment therefore contributes to the broader reputation an organization builds in the talent market.",
-      },
-    ],
-    takeaway:
-      "Candidate experience is not an extra layer around recruitment. It is part of how hiring quality is experienced.",
-  },
+ 
 
   {
   id: 3,
@@ -374,7 +345,7 @@ export const articlesData = [
   readTime: "6 min read",
 
   image: "/images/article-2.jpg",
-
+heroImageSize: "workplaceWide",
   openingPerspective:
     "A strong workplace proposition is no longer built around one promise. Different people value different things, which makes clarity more useful than trying to offer everything to everyone.",
 
@@ -688,9 +659,9 @@ export const articlesData = [
 
   readTime: "6 min read",
 
-  image: "/images/delayed-hire.png",
+  image: "/images/delayed-hire-wide.png",
   imageType: "infographic",
-  heroImageSize: "compact",
+  heroImageSize: "delayedWide",
   heroTitleSize: "large",
 
  openingPerspective:
@@ -782,10 +753,10 @@ perspectiveInsight:
 
   readTime: "7 min read",
 
-  image: "/images/women-electronics-revolution.png",
+  image: "/images/women-electronics-final.png",
 
   imageType: "infographic",
-  heroImageSize: "article3",
+  heroImageSize: "womenWide",
   heroTitleSize: "article3",
 
   openingPerspective:

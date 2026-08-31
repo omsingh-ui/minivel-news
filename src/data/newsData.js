@@ -181,41 +181,37 @@ export const trendingStories = [
   {
     id: 1,
     number: "01",
-    category: "Talent & Hiring",
+    category: "Ideas & Perspectives",
     title:
-      "Why skills-first hiring is gaining momentum across modern recruitment",
+      "Where human judgment matters most in an AI-enabled workplace",
+    slug: "human-judgment-ai-workplace",
   },
 
   {
     id: 2,
     number: "02",
-    category: "Future of Work",
+    category: "Business & Industry",
     title:
-      "Where human judgment matters most in an AI-enabled workplace",
+      "India's Electronics Revolution Is Being Powered by Women",
+    slug: "india-electronics-revolution-women-careers",
   },
 
   {
     id: 3,
     number: "03",
-    category: "Workforce & Business",
+    category: "Ideas & Perspectives",
     title:
-      "Why businesses are thinking differently about long-term talent strategy",
+      "What professionals increasingly expect from the modern workplace",
+    slug: "workplace-expectations",
   },
 
   {
     id: 4,
     number: "04",
-    category: "Careers & Growth",
+    category: "Business & Industry",
     title:
-      "The capabilities becoming more valuable as careers continue to evolve",
-  },
-
-  {
-    id: 5,
-    number: "05",
-    category: "People & Workplace",
-    title:
-      "Why candidate and employee experience matter more in a changing world of work",
+      "Driving India's Automotive Growth Through the Right Talent",
+    slug: "driving-india-automotive-growth-right-talent",
   },
 ];
 

@@ -1,10 +1,17 @@
+import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+
 import { articlesData } from "../data/articlesData";
+import { calculateReadTime } from "../utils/readTime";
 
 function ArticleDetail() {
   const { slug } = useParams();
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, [slug]);
 
   const article = articlesData.find((item) => item.slug === slug);
+  const readTime = article ? calculateReadTime(article) : "";
 
   if (!article) {
     return (
@@ -33,9 +40,17 @@ function ArticleDetail() {
     );
   }
 
-  const relatedArticles = articlesData
-    .filter((item) => item.slug !== article.slug)
-    .slice(0, 2);
+const relatedSlugs = [
+  "skills-first-hiring",
+  "workforce-planning-business-growth",
+  "workplace-expectations",
+];
+
+const relatedArticles = articlesData.filter(
+  (item) =>
+    relatedSlugs.includes(item.slug) &&
+    item.slug !== article.slug
+);
 
   return (
     <main className="bg-[#edf0ed] text-[#111111]">
@@ -71,15 +86,20 @@ function ArticleDetail() {
         <span className="h-1.5 w-1.5 rounded-full bg-emerald-300/60" />
 
         <p className="text-[8px] uppercase tracking-[0.19em] text-white/30">
-          Minivel · {article.readTime}
+          Minivel · {readTime}
         </p>
 
       </div>
 
     </div>
 
+    
     {/* MAIN HERO */}
-    <div className="mt-7 grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-10">
+<div
+  className={`grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-10 ${
+    article.heroImageSize === "workplaceWide" ? "mt-2" : "mt-4"
+  }`}
+>
 
       {/* LEFT CONTENT */}
       <div className="min-w-0">
@@ -100,8 +120,8 @@ function ArticleDetail() {
   className={`mt-5 font-semibold tracking-[-0.045em] text-white ${
     article.heroTitleSize === "large"
       ? "max-w-[720px] text-[46px] leading-[1.01] md:text-[56px] lg:text-[64px]"
-      : article.heroTitleSize === "article3"
-? "max-w-[760px] text-[38px] leading-[1.01] md:text-[46px] lg:text-[50px]"
+    : article.heroTitleSize === "article3"
+? "max-w-[820px] text-[36px] leading-[1.03] md:text-[42px] lg:text-[46px]"
       : "max-w-[650px] text-[42px] leading-[1.01] md:text-[50px] lg:text-[56px]"
   }`}
 >
@@ -155,7 +175,7 @@ function ArticleDetail() {
               </p>
 
               <p className="mt-1 text-[11px] text-white/55">
-                {article.readTime}
+                {readTime}
               </p>
             </div>
 
@@ -166,10 +186,16 @@ function ArticleDetail() {
       </div>
 
       {/* RIGHT IMAGE */}
-      <div className="flex w-full items-center justify-center">
+      <div
+  className={`flex w-full items-center justify-center ${
+    article.heroImageSize === "article3wide"
+      ? "overflow-hidden rounded-[32px]"
+      : ""
+  }`}
+>
 
         <div
-          className={`relative w-full overflow-hidden rounded-[26px] ${
+          className={`relative w-full overflow-hidden rounded-[32px] ${
             article.heroImageSize === "compact"
               ? "flex items-center justify-center"
               : ""
@@ -179,18 +205,35 @@ function ArticleDetail() {
           <img
             src={article.image}
             alt={article.title}
+            style={
+  article.heroImageSize === "article3wide"
+    ? { borderRadius: "32px", overflow: "hidden" }
+    : {}
+}
          className={
   article.heroImageSize === "compact"
     ? "block h-auto w-[82%] max-w-[430px] rounded-[26px]"
 
-    : article.heroImageSize === "article3"
-    ? "block h-auto w-[86%] max-w-[540px] rounded-[26px]"
+: article.heroImageSize === "article3"
+? "block h-auto w-full max-h-[430px] rounded-[26px] object-contain object-center"
 
-    : article.heroImageSize === "article4"
+: article.heroImageSize === "article3wide"
+? "block h-auto w-full rounded-[40px]"
+
+: article.heroImageSize === "womenWide"
+? "block h-auto w-full rounded-[32px] object-contain"
+
+: article.heroImageSize === "delayedWide"
+? "block h-auto w-[108%] max-w-none rounded-[32px]"
+
+: article.heroImageSize === "workplaceWide"
+? "block h-[400px] w-full rounded-[32px] object-cover object-center"
+
+: article.heroImageSize === "article4"
     ? "block h-[470px] w-full max-w-[620px] rounded-[22px] object-contain object-center"
 
- : article.heroImageSize === "article5"
-? "block h-auto w-full rounded-[26px]"
+: article.heroImageSize === "article5"
+? "block h-auto w-full scale-[1.015] rounded-[32px]"
 
     : "block h-auto w-full"
 }
@@ -858,7 +901,7 @@ function ArticleDetail() {
               <div className="mt-5 flex items-center justify-between">
 
                 <p className="text-[8px] uppercase tracking-[0.18em] text-black/35">
-                  {item.readTime}
+                  {calculateReadTime(item)}
                 </p>
 
                 <span className="flex h-8 w-8 items-center justify-center rounded-full border border-black/10 text-[12px] text-black/55 transition-all duration-300 group-hover:translate-x-1 group-hover:bg-[#111] group-hover:text-white">

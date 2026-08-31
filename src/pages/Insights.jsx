@@ -1,6 +1,17 @@
 import { featuredArticles } from "../data/newsData";
+import { articlesData } from "../data/articlesData";
+import { calculateReadTime } from "../utils/readTime";
 
 function Insights() {
+  const getReadTime = (slug) => {
+  const fullArticle = articlesData.find(
+    (article) => article.slug === slug
+  );
+
+  return fullArticle
+    ? calculateReadTime(fullArticle)
+    : "";
+};
   const insightTopics = [
     {
       number: "01",
@@ -300,8 +311,8 @@ function Insights() {
                     </p>
 
                     <p className="text-[9px] text-black/30">
-                      {article.readTime}
-                    </p>
+  {getReadTime(article.slug)}
+</p>
                   </div>
 
                   <h3 className="mt-3 text-[20px] font-semibold leading-[1.22] tracking-[-0.02em] md:text-[22px]">

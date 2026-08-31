@@ -8,7 +8,6 @@ import BusinessIndustry from "./components/BusinessIndustry";
 import VisualStory from "./components/VisualStory";
 import CareersWorkplace from "./components/CareersWorkplace";
 import TrendingStories from "./components/TrendingStories";
-import EditorsPick from "./components/EditorsPick";
 import NewsFooterCTA from "./components/NewsFooterCTA";
 
 import Insights from "./pages/Insights";
@@ -29,7 +28,6 @@ function Home() {
       <VisualStory />
       <CareersWorkplace />
       <TrendingStories />
-      <EditorsPick />
       <NewsFooterCTA />
     </main>
   );
