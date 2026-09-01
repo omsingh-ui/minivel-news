@@ -78,3 +78,44 @@
     transform: scale(1.8);
   }
 }
+
+/* =========================================
+   CAREERS — JOURNEY LIGHT
+========================================= */
+
+@keyframes careerTravel {
+  0% {
+    left: 2px;
+  }
+
+  100% {
+    left: calc(100% - 11px);
+  }
+}
+
+@keyframes careerLineTravel {
+  0% {
+    transform: translateX(-110%);
+  }
+
+  100% {
+    transform: translateX(360%);
+  }
+}
+
+.career-travel-light {
+  animation: careerTravel 6s ease-in-out infinite alternate;
+}
+
+.career-travel-line {
+  animation: careerLineTravel 6s ease-in-out infinite alternate;
+}
+
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .career-travel-light,
+  .career-travel-line {
+    animation: none;
+  }
+}

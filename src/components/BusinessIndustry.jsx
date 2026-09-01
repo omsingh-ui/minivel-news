@@ -761,7 +761,7 @@ function BusinessIndustry() {
 
   return (
     <section
-      id="business-industry"
+      id="business"
       className="relative overflow-hidden bg-[#030706] text-white"
     >
       {/* Background atmosphere */}

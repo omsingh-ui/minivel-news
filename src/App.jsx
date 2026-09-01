@@ -17,6 +17,7 @@ import CareersGrowth from "./pages/CareersGrowth";
 import FutureOfWork from "./pages/FutureOfWork";
 import ArticleDetail from "./pages/ArticleDetail";
 import ScrollToTop from "./components/ScrollToTop";
+import Careers from "./pages/Careers";
 function Home() {
   return (
     <main>
@@ -45,6 +46,8 @@ function App() {
 
         {/* Insights Page */}
         <Route path="/insights" element={<Insights />} />
+
+        <Route path="/careers" element={<Careers />} />
 
         <Route path="/talent-hiring" element={<TalentHiring />} />
 

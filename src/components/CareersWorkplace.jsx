@@ -17,11 +17,14 @@ function CareersWorkplace() {
   ];
 
   return (
-    <section className="bg-[#e9ece8] text-[#111111]">
+    <section
+     id="workplace"
+      className="bg-[#e9ece8] text-[#111111]"
+    >
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-12 md:py-14">
 
         {/* Header */}
-        <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-6 lg:gap-12 items-end border-b border-black/15 pb-5">
+        <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-6 lg:gap-12 items-end">
           <div>
             <p className="text-[10px] md:text-xs uppercase tracking-[0.24em] font-medium text-emerald-800/70">
               Careers & Workplace
@@ -58,8 +61,6 @@ function CareersWorkplace() {
                   <p className="mt-2 text-[11px] font-medium text-black/38">
                     {story.category}
                   </p>
-
-                  <div className="mt-4 h-[2px] w-8 bg-emerald-800/30 transition-all duration-500 group-hover:w-14 group-hover:bg-emerald-800/60" />
                 </div>
 
                 {/* Number */}
@@ -80,7 +81,7 @@ function CareersWorkplace() {
               </div>
 
               {/* Footer */}
-              <div className="relative z-10 mt-7 pt-4 border-t border-black/[0.08]">
+              <div className="relative z-10 mt-7">
                 <div className="flex items-center gap-2">
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-700/55" />
 
@@ -90,11 +91,10 @@ function CareersWorkplace() {
                 </div>
               </div>
 
-              {/* Hover Accent */}
-              <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-emerald-800 transition-all duration-500 group-hover:w-full" />
             </article>
           ))}
         </div>
+
       </div>
     </section>
   );

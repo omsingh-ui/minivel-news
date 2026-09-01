@@ -1,12 +1,20 @@
+import { Link } from "react-router-dom";
+
 function NewsHero() {
   const categories = [
     "Latest",
     "Business",
-    "Technology",
     "Careers",
     "Workplace",
     "Articles",
   ];
+
+  const targets = {
+    Latest: "#latest",
+    Business: "#business",
+    Workplace: "#workplace",
+    Articles: "#articles",
+  };
 
   return (
     <section className="relative overflow-hidden bg-[#080b0b] text-white">
@@ -27,7 +35,9 @@ function NewsHero() {
 
           <div className="absolute inset-[84px] rotate-[-4deg] rounded-[50%] border border-emerald-200/10" />
         </div>
+
       </div>
+
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 pb-7 pt-8 md:px-8 md:pb-8 md:pt-10">
 
@@ -47,13 +57,16 @@ function NewsHero() {
             </p>
 
           </div>
+
         </div>
+
 
         {/* Main hero */}
         <div className="grid gap-8 py-12 md:py-14 lg:grid-cols-[1.12fr_0.88fr] lg:items-end lg:gap-10">
 
           {/* Left */}
           <div>
+
             <p className="mb-5 text-[10px] uppercase tracking-[0.22em] text-emerald-300/80 md:text-xs">
               Business · Careers · Technology · Workplace
             </p>
@@ -72,19 +85,20 @@ function NewsHero() {
 
             </h1>
 
-            {/* Supporting text directly below heading */}
+
             <p className="mt-7 max-w-[620px] text-[15px] leading-[1.75] text-white/52 md:text-[17px]">
               Explore the ideas, news and perspectives shaping what matters
               across business, careers, technology and the workplace.
             </p>
+
           </div>
+
 
           {/* Right */}
           <div className="flex items-end lg:justify-end">
 
             <div className="w-full max-w-[420px]">
 
-              {/* Small editorial message */}
               <p className="text-[10px] uppercase tracking-[0.22em] text-emerald-300/55">
                 Explore the latest
               </p>
@@ -94,8 +108,12 @@ function NewsHero() {
                 people, organizations and the way work continues to evolve.
               </p>
 
-              {/* CTA */}
-              <button className="group mt-6 inline-flex items-center gap-4 text-[11px] uppercase tracking-[0.2em] text-white/80">
+
+              {/* Explore Latest */}
+              <a
+                href="#latest"
+                className="group mt-6 inline-flex items-center gap-4 text-[11px] uppercase tracking-[0.2em] text-white/80"
+              >
 
                 Explore Latest
 
@@ -103,34 +121,63 @@ function NewsHero() {
                   →
                 </span>
 
-              </button>
+              </a>
 
             </div>
+
           </div>
+
         </div>
 
-        {/* Bottom nav */}
+
+        {/* Bottom Navigation */}
         <div className="flex flex-wrap gap-x-8 gap-y-3 border-t border-white/10 pt-5">
 
-          {categories.map((item, index) => (
-            <button
-              key={item}
-              className={`relative pb-2 text-[10px] uppercase tracking-[0.18em] transition-colors duration-300 md:text-xs ${
-                index === 0
-                  ? "text-white"
-                  : "text-white/45 hover:text-white"
-              }`}
-            >
-              {item}
+          {categories.map((item, index) => {
 
-              {/* Active indicator */}
-              {index === 0 && (
-                <span className="absolute bottom-0 left-0 h-px w-full bg-emerald-300/75" />
-              )}
-            </button>
-          ))}
+            const className = `relative pb-2 text-[10px] uppercase tracking-[0.18em] transition-colors duration-300 md:text-xs ${
+              index === 0
+                ? "text-white"
+                : "text-white/45 hover:text-white"
+            }`;
+
+
+            /* Careers → separate Careers page */
+            if (item === "Careers") {
+              return (
+                <Link
+                  key={item}
+                  to="/careers"
+                  className={className}
+                >
+                  {item}
+                </Link>
+              );
+            }
+
+
+            /* Other items → homepage sections */
+            return (
+              <a
+                key={item}
+                href={targets[item]}
+                className={className}
+              >
+
+                {item}
+
+                {/* Latest active indicator */}
+                {index === 0 && (
+                  <span className="absolute bottom-0 left-0 h-px w-full bg-emerald-300/75" />
+                )}
+
+              </a>
+            );
+
+          })}
 
         </div>
+
       </div>
     </section>
   );

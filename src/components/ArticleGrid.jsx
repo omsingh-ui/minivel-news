@@ -14,7 +14,10 @@ function ArticleGrid() {
     : "";
 };
   return (
-    <section className="bg-[#e9ece8] text-[#111111]">
+   <section
+  id="articles"
+  className="bg-[#e9ece8] text-[#111111]"
+>
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-14 md:py-16">
 
         {/* Header */}

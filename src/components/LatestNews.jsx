@@ -2,7 +2,10 @@ import { latestNews } from "../data/newsData";
 
 function LatestNews() {
   return (
-    <section className="relative overflow-hidden bg-[#0b0e0e] text-white">
+    <section
+  id="latest"
+  className="relative overflow-hidden bg-[#0b0e0e] text-white"
+>
       {/* Background depth */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -left-20 top-12 h-72 w-72 rounded-full bg-emerald-400/[0.035] blur-[110px]" />
