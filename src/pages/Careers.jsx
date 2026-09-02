@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Careers() {
   const [qualityPage, setQualityPage] = useState(0);
@@ -101,7 +102,32 @@ function Careers() {
 
         </div>
 
-        <div className="relative z-10 mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-20 lg:py-24">
+         <div className="relative z-10 mx-auto max-w-7xl px-6 pb-16 pt-8 md:px-8 md:pb-20 md:pt-10 lg:pb-24 lg:pt-12">
+          {/* Back to News & Articles */}
+<Link
+  to="/"
+  className="
+    group
+    mb-10
+    inline-flex
+    items-center
+    gap-3
+    text-[9px]
+    font-medium
+    uppercase
+    tracking-[0.2em]
+    text-white/35
+    transition-colors
+    duration-300
+    hover:text-white/75
+  "
+>
+  <span className="transition-transform duration-300 group-hover:-translate-x-1">
+    ←
+  </span>
+
+  Back to News & Articles
+</Link>
 
           <div className="grid items-center gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
 
@@ -151,8 +177,8 @@ function Careers() {
               {/* Actions */}
               <div className="mt-7 flex flex-wrap items-center gap-5">
 
-                <a
-  href="#opportunities"
+                <Link
+  to="/careers/jobs"
   className="
     group
     inline-flex items-center gap-3
@@ -175,7 +201,7 @@ function Careers() {
   <span className="transition-transform duration-300 group-hover:translate-x-1">
     →
   </span>
-</a>
+</Link>
 
                 <p className="text-[9px] uppercase tracking-[0.19em] text-white/25">
                   Learn · Contribute · Grow
@@ -1622,32 +1648,31 @@ function Careers() {
 ========================== */}
 <div className="mt-8">
 
-  <a
-    href="/careers/jobs"
-    className="
-      group
-      inline-flex items-center gap-3
-      rounded-full
-      bg-emerald-300
-      px-6 py-3.5
-      text-[9px]
-      font-semibold
-      uppercase
-      tracking-[0.18em]
-      text-[#07100e]
-      transition-all
-      duration-300
-      hover:-translate-y-0.5
-      hover:bg-emerald-200
-    "
-  >
-    Explore Open Roles
+ <Link
+  to="/careers/jobs"
+  className="
+    group
+    inline-flex items-center gap-3
+    rounded-full
+    bg-emerald-300
+    px-6 py-3.5
+    text-[9px]
+    font-semibold
+    uppercase
+    tracking-[0.18em]
+    text-[#07100e]
+    transition-all
+    duration-300
+    hover:-translate-y-0.5
+    hover:bg-emerald-200
+  "
+>
+  Explore Open Roles
 
-    <span className="text-[13px] transition-transform duration-300 group-hover:translate-x-1">
-      →
-    </span>
-
-  </a>
+  <span className="text-[13px] transition-transform duration-300 group-hover:translate-x-1">
+    →
+  </span>
+</Link>
 
 </div>
 

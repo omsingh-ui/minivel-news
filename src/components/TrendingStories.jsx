@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 
 function TrendingStories() {
   return (
-    <section className="relative bg-[#080b0b] text-white">
+    <section
+    id="trending"
+    className="relative bg-[#080b0b] text-white"
+    >
       <div className="mx-auto max-w-7xl px-6 pb-7 pt-14 md:px-8 md:pb-9 md:pt-16">
 
         {/* =====================
@@ -48,6 +51,7 @@ function TrendingStories() {
             <Link
               key={story.id}
               to={`/article/${story.slug}`}
+              state={{ source: "trending" }}
               className="
                 group
                 sticky

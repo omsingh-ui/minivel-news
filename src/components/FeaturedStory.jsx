@@ -76,8 +76,10 @@ function FeaturedStory() {
             </div>
 
             <Link
-  to="/article/business-people-workplace-transition"
+  
+  to="/article/business-people-workplace-transition?from=featured"
   className="group mt-7 inline-flex items-center gap-4 text-[11px] uppercase tracking-[0.2em] text-black/75"
+
 >
   Read Story
 

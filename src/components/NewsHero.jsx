@@ -2,38 +2,31 @@ import { Link } from "react-router-dom";
 
 function NewsHero() {
   const categories = [
-    "Latest",
-    "Business",
-    "Careers",
-    "Workplace",
-    "Articles",
+    { label: "Latest", href: "#latest" },
+    { label: "Business", href: "#business" },
+    { label: "Careers", route: "/careers" },
+    { label: "Workplace", href: "#workplace" },
+    { label: "Articles", href: "#articles" },
   ];
-
-  const targets = {
-    Latest: "#latest",
-    Business: "#business",
-    Workplace: "#workplace",
-    Articles: "#articles",
-  };
 
   return (
     <section className="relative overflow-hidden bg-[#080b0b] text-white">
+
       {/* Background atmosphere */}
       <div className="pointer-events-none absolute inset-0">
 
-        {/* Emerald glow */}
         <div className="absolute right-[-120px] top-[-80px] h-[500px] w-[500px] rounded-full bg-emerald-400/[0.035] blur-[140px]" />
 
-        {/* Left soft glow */}
         <div className="absolute bottom-[-140px] left-[-120px] h-[380px] w-[380px] rounded-full bg-white/[0.02] blur-[130px]" />
 
-        {/* Decorative curves */}
         <div className="absolute right-[-70px] top-[70px] h-[520px] w-[620px] opacity-[0.07]">
+
           <div className="absolute inset-0 rotate-[-10deg] rounded-[50%] border border-emerald-200/20" />
 
           <div className="absolute inset-[42px] rotate-[-7deg] rounded-[50%] border border-emerald-200/15" />
 
           <div className="absolute inset-[84px] rotate-[-4deg] rounded-[50%] border border-emerald-200/10" />
+
         </div>
 
       </div>
@@ -47,6 +40,7 @@ function NewsHero() {
           <p className="text-[10px] uppercase tracking-[0.26em] text-white/65 md:text-xs">
             Minivel / News & Articles
           </p>
+
 
           <div className="flex items-center gap-2.5">
 
@@ -70,6 +64,7 @@ function NewsHero() {
             <p className="mb-5 text-[10px] uppercase tracking-[0.22em] text-emerald-300/80 md:text-xs">
               Business · Careers · Technology · Workplace
             </p>
+
 
             <h1 className="hero-heading max-w-[780px] text-[46px] font-medium leading-[1.02] tracking-[-0.035em] md:text-[62px] lg:text-[70px]">
 
@@ -103,24 +98,22 @@ function NewsHero() {
                 Explore the latest
               </p>
 
+
               <p className="mt-3 text-[16px] leading-[1.7] text-white/48">
                 Stay close to the developments, perspectives and ideas shaping
                 people, organizations and the way work continues to evolve.
               </p>
 
 
-              {/* Explore Latest */}
               <a
                 href="#latest"
-                className="group mt-6 inline-flex items-center gap-4 text-[11px] uppercase tracking-[0.2em] text-white/80"
+                className="group mt-6 inline-flex items-center gap-4 text-[11px] uppercase tracking-[0.2em] text-white/80 transition-colors duration-300 hover:text-white"
               >
-
                 Explore Latest
 
                 <span className="flex h-11 w-11 items-center justify-center rounded-full border border-emerald-400/45 text-emerald-300 transition-all duration-300 group-hover:translate-x-1 group-hover:bg-emerald-400 group-hover:text-black">
                   →
                 </span>
-
               </a>
 
             </div>
@@ -131,54 +124,61 @@ function NewsHero() {
 
 
         {/* Bottom Navigation */}
-        <div className="flex flex-wrap gap-x-8 gap-y-3 border-t border-white/10 pt-5">
+        <nav
+          aria-label="News sections"
+          className="flex flex-wrap gap-x-8 gap-y-3 border-t border-white/10 pt-5"
+        >
 
-          {categories.map((item, index) => {
+          {categories.map((item) => {
+            const isLatest = item.label === "Latest";
 
-            const className = `relative pb-2 text-[10px] uppercase tracking-[0.18em] transition-colors duration-300 md:text-xs ${
-              index === 0
-                ? "text-white"
-                : "text-white/45 hover:text-white"
-            }`;
+            const className = `
+              relative
+              pb-2
+              text-[10px]
+              uppercase
+              tracking-[0.18em]
+              transition-colors
+              duration-300
+              md:text-xs
+              ${
+                isLatest
+                  ? "text-white"
+                  : "text-white/45 hover:text-white"
+              }
+            `;
 
-
-            /* Careers → separate Careers page */
-            if (item === "Careers") {
+            if (item.route) {
               return (
                 <Link
-                  key={item}
-                  to="/careers"
+                  key={item.label}
+                  to={item.route}
                   className={className}
                 >
-                  {item}
+                  {item.label}
                 </Link>
               );
             }
 
-
-            /* Other items → homepage sections */
             return (
               <a
-                key={item}
-                href={targets[item]}
+                key={item.label}
+                href={item.href}
                 className={className}
               >
+                {item.label}
 
-                {item}
-
-                {/* Latest active indicator */}
-                {index === 0 && (
+                {isLatest && (
                   <span className="absolute bottom-0 left-0 h-px w-full bg-emerald-300/75" />
                 )}
-
               </a>
             );
-
           })}
 
-        </div>
+        </nav>
 
       </div>
+
     </section>
   );
 }

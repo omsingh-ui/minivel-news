@@ -18,17 +18,31 @@ import FutureOfWork from "./pages/FutureOfWork";
 import ArticleDetail from "./pages/ArticleDetail";
 import ScrollToTop from "./components/ScrollToTop";
 import Careers from "./pages/Careers";
+import JobOpenings from "./pages/JobOpenings";
 function Home() {
   return (
     <main>
       <NewsHero />
+
       <FeaturedStory />
-      <LatestNews />
+
+      <section id="latest">
+        <LatestNews />
+      </section>
+
       <ArticleGrid />
-      <BusinessIndustry />
+      <section id="business">
+        <BusinessIndustry />
+      </section>
+
       <VisualStory />
-      <CareersWorkplace />
+
+      <section id="workplace">
+        <CareersWorkplace />
+      </section>
+
       <TrendingStories />
+
       <NewsFooterCTA />
     </main>
   );
@@ -46,8 +60,10 @@ function App() {
 
         {/* Insights Page */}
         <Route path="/insights" element={<Insights />} />
-
-        <Route path="/careers" element={<Careers />} />
+        
+         {/* Careers Pages */}
+         <Route path="/careers" element={<Careers />} />
+         <Route path="/careers/jobs" element={<JobOpenings />} />
 
         <Route path="/talent-hiring" element={<TalentHiring />} />
 

@@ -1,57 +1,93 @@
 import { useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useLocation } from "react-router-dom";
 
 import { articlesData } from "../data/articlesData";
 import { calculateReadTime } from "../utils/readTime";
 
 function ArticleDetail() {
-  const { slug } = useParams();
-  useEffect(() => {
+ const { slug } = useParams();
+
+const location = useLocation();
+
+const params = new URLSearchParams(location.search);
+
+const source =
+  params.get("from") || location.state?.source;
+
+useEffect(() => {
   window.scrollTo(0, 0);
 }, [slug]);
 
   const article = articlesData.find((item) => item.slug === slug);
-  const readTime = article ? calculateReadTime(article) : "";
+const readTime = article ? calculateReadTime(article) : "";
 
-  if (!article) {
-    return (
-      <main className="flex min-h-screen items-center justify-center bg-[#080b0b] px-6 text-white">
-        <div className="text-center">
-          <p className="text-[10px] uppercase tracking-[0.24em] text-emerald-300/70">
-            Minivel / Article
-          </p>
+if (!article) {
+  return (
+    <main className="flex min-h-screen items-center justify-center bg-[#080b0b] px-6 text-white">
+      <div className="text-center">
+        <p className="text-[10px] uppercase tracking-[0.24em] text-emerald-300/70">
+          Minivel / Article
+        </p>
 
-          <h1 className="mt-4 text-3xl font-medium md:text-4xl">
-            Article not found.
-          </h1>
+        <h1 className="mt-4 text-3xl font-medium md:text-4xl">
+          Article not found.
+        </h1>
 
-          <Link
-            to="/"
-            className="group mt-6 inline-flex items-center gap-3 text-[9px] uppercase tracking-[0.22em] text-white/45 transition-colors hover:text-white"
-          >
-            <span className="transition-transform duration-300 group-hover:-translate-x-1">
-              ←
-            </span>
+        <Link
+          to="/"
+          className="group mt-6 inline-flex items-center gap-3 text-[9px] uppercase tracking-[0.22em] text-white/45 transition-colors hover:text-white"
+        >
+          <span className="transition-transform duration-300 group-hover:-translate-x-1">
+            ←
+          </span>
 
-            Back to Home
-          </Link>
-        </div>
-      </main>
-    );
-  }
+          Back to Home
+        </Link>
+      </div>
+    </main>
+  );
+}
 
-const relatedSlugs = [
-  "skills-first-hiring",
-  "workforce-planning-business-growth",
-  "workplace-expectations",
-];
+const activeSection =
+  source === "trending"
+    ? "trending"
+    : source === "featured"
+    ? "featured"
+    : article.section;
 
-const relatedArticles = articlesData.filter(
-  (item) =>
-    relatedSlugs.includes(item.slug) &&
+const activeSectionLabel =
+  source === "trending"
+    ? "Trending"
+    : source === "featured"
+    ? "Featured Story"
+    : article.sectionLabel || "Articles";;
+
+const activeBackTarget =
+  source === "trending"
+    ? "/#trending"
+    : source === "featured"
+    ? "/#featured-story"
+    : article.backTarget || "/#articles";
+
+const relatedArticles = articlesData
+  .filter((item) => {
+    if (source === "trending") {
+      return item.trending === true && item.slug !== article.slug;
+    }
+
+   if (source === "featured") {
+  return (
+    item.section === "articles" &&
     item.slug !== article.slug
-);
+  );
+}
 
+    return (
+      item.section === activeSection &&
+      item.slug !== article.slug
+    );
+  })
+  .slice(0, 2);
   return (
     <main className="bg-[#edf0ed] text-[#111111]">
 
@@ -70,16 +106,16 @@ const relatedArticles = articlesData.filter(
     {/* TOP NAVIGATION */}
     <div className="flex items-center justify-between gap-5">
 
-      <Link
-        to="/#business-industry"
-        className="group inline-flex items-center gap-3 text-[9px] font-medium uppercase tracking-[0.21em] text-white/45 transition-colors hover:text-white"
-      >
-        <span className="transition-transform duration-300 group-hover:-translate-x-1">
-          ←
-        </span>
+    <Link
+  to={activeBackTarget}
+  className="group inline-flex items-center gap-3 text-[9px] font-medium uppercase tracking-[0.21em] text-white/45 transition-colors hover:text-white"
+>
+  <span className="transition-transform duration-300 group-hover:-translate-x-1">
+    ←
+  </span>
 
-        Back to Articles
-      </Link>
+  Back to {activeSectionLabel}
+</Link>
 
       <div className="hidden items-center gap-2.5 md:flex">
 
@@ -845,7 +881,7 @@ const relatedArticles = articlesData.filter(
       </div>
 
       <p className="hidden text-[8px] uppercase tracking-[0.2em] text-black/25 md:block">
-        More from Business & Industry
+       More from {activeSectionLabel}
       </p>
 
     </div>
@@ -921,16 +957,34 @@ const relatedArticles = articlesData.filter(
     {/* Return Navigation */}
     <div className="mt-8 flex justify-end">
 
-      <Link
-        to="/#business-industry"
-        className="group inline-flex items-center gap-3 text-[9px] font-medium uppercase tracking-[0.2em] text-black/45 transition-colors hover:text-black"
-      >
-        Back to Articles
+    <Link
+  to={activeBackTarget}
+  className="
+    group
+    inline-flex
+    items-center
+    gap-3
+    rounded-full
+    bg-[#101412]
+    px-5
+    py-3
+    text-[9px]
+    font-semibold
+    uppercase
+    tracking-[0.18em]
+    text-white
+    transition-all
+    duration-300
+    hover:-translate-y-0.5
+    hover:bg-emerald-800
+  "
+>
+  Back to {activeSectionLabel}
 
-        <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black/12 text-[12px] transition-all duration-300 group-hover:translate-x-1 group-hover:bg-[#111] group-hover:text-white">
-          →
-        </span>
-      </Link>
+  <span className="transition-transform duration-300 group-hover:translate-x-1">
+    →
+  </span>
+</Link>
 
     </div>
 

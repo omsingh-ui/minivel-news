@@ -5,6 +5,9 @@ export const articlesData = [
   slug: "skills-first-hiring",
 
   category: "Talent & Hiring",
+  section: "articles",
+  sectionLabel: "Ideas & Perspectives",
+  backTarget: "/#articles",
 
   title:
     "Why skills-first hiring is changing how organizations discover talent",
@@ -110,6 +113,9 @@ export const articlesData = [
   slug: "workforce-planning-business-growth",
 
   category: "Workforce & Business",
+  section: "articles",
+  sectionLabel: "Ideas & Perspectives",
+  backTarget: "/#articles",
 
   title:
     "Why workforce planning is becoming central to business growth",
@@ -272,6 +278,9 @@ export const articlesData = [
     id: 6,
     slug: "human-judgment-ai-workplace",
     category: "Future of Work",
+    section: "trending",
+    sectionLabel: "Trending",
+    backTarget: "/#trending",
     title: "Where human judgment matters most in an AI-enabled workplace",
     intro:
       "Technology can process information, automate routine work and support decisions, but many workplace situations still depend on context, trust and human interpretation.",
@@ -335,6 +344,10 @@ export const articlesData = [
   slug: "workplace-expectations",
 
   category: "People & Workplace",
+  section: "articles",
+  sectionLabel: "Ideas & Perspectives",
+  backTarget: "/#articles",
+  trending: true,
 
   title:
     "What professionals increasingly expect from the modern workplace",
@@ -437,6 +450,10 @@ heroImageSize: "workplaceWide",
   slug: "business-people-workplace-transition",
 
   category: "People & Workplace",
+  section: "articles",
+  sectionLabel: "Ideas & Perspectives",
+  backTarget: "/#articles",
+  featured: true,
 
   title: "Business, people and the workplace in transition",
 
@@ -544,6 +561,9 @@ heroImageSize: "workplaceWide",
   slug: "india-msme-growth-talent-partner",
 
   category: "Business & Industry",
+  section: "business",
+  sectionLabel: "Business & Industry",
+  backTarget: "/#business",
 
   title:
     "India's MSME growth story needs the right talent partner",
@@ -651,6 +671,9 @@ heroImageSize: "workplaceWide",
   slug: "cost-of-a-delayed-hire",
 
   category: "Hiring Strategy",
+  section: "business",
+  sectionLabel: "Business & Industry",
+  backTarget: "/#business",
 
   title: "The cost of a delayed hire is higher than you think",
 
@@ -744,7 +767,10 @@ perspectiveInsight:
   slug: "india-electronics-revolution-women-careers",
 
   category: "Electronics Manufacturing",
-
+  section: "business",
+  sectionLabel: "Business & Industry",
+  backTarget: "/#business",
+  trending: true,
   title:
     "India's Electronics Revolution Is Being Powered by Women. The Next Challenge Is Building Careers, Not Just Factories.",
 
@@ -846,6 +872,10 @@ perspectiveInsight:
   slug: "driving-india-automotive-growth-right-talent",
 
   category: "Automotive & Mobility",
+  section: "business",
+  sectionLabel: "Business & Industry",
+  backTarget: "/#business",
+  trending: true,
 
   title:
     "Driving India's Automotive Growth Through the Right Talent",
@@ -951,6 +981,9 @@ takeaway:
   slug: "best-recruiters-solve-business-problems",
 
   category: "Talent Strategy",
+  section: "business",
+  sectionLabel: "Business & Industry",
+  backTarget: "/#business",
 
   title:
     "The Best Recruiters Don't Fill Roles. They Solve Business Problems.",
@@ -1055,6 +1088,9 @@ takeaway:
   slug: "integrated-ai-transformational-recruitment",
 
   category: "AI & Recruitment",
+  section: "business",
+  sectionLabel: "Business & Industry",
+  backTarget: "/#business",
 
   title:
     "AI Is Powerful. Integrated AI Is Transformational.",
