@@ -696,16 +696,27 @@ function Careers() {
               01
             </p>
 
-            <span className="h-1.5 w-1.5 rounded-full bg-white/15 transition-all duration-300 group-hover:scale-125 group-hover:bg-emerald-300" />
+
 
           </div>
 
           {/* Visual */}
           <div className="mt-8 flex h-14 w-14 items-center justify-center rounded-full border border-white/[0.08] bg-white/[0.02] transition-all duration-500 group-hover:border-emerald-300/20 group-hover:bg-emerald-300/[0.04]">
 
-            <span className="text-[18px] font-light text-emerald-300/65">
-              +
-            </span>
+           <svg
+  viewBox="0 0 24 24"
+  className="h-[26px] w-[26px] text-emerald-300/70"
+  fill="none"
+  stroke="currentColor"
+  strokeWidth="1.4"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+  aria-hidden="true"
+>
+  <path d="M4 5.5c2.7-.8 5.3-.3 8 1.5v12c-2.7-1.8-5.3-2.3-8-1.5V5.5Z" />
+  <path d="M20 5.5c-2.7-.8-5.3-.3-8 1.5v12c2.7-1.8 5.3-2.3 8-1.5V5.5Z" />
+  <path d="M12 7v12" />
+</svg>
 
           </div>
 
@@ -764,16 +775,27 @@ function Careers() {
               02
             </p>
 
-            <span className="h-1.5 w-1.5 rounded-full bg-white/15 transition-all duration-300 group-hover:scale-125 group-hover:bg-emerald-300" />
+            
 
           </div>
 
           <div className="mt-8 flex h-14 w-14 items-center justify-center rounded-full border border-white/[0.08] bg-white/[0.02] transition-all duration-500 group-hover:border-emerald-300/20 group-hover:bg-emerald-300/[0.04]">
 
-            <div className="flex items-center">
-              <span className="h-3 w-3 rounded-full border border-emerald-300/60" />
-              <span className="-ml-1 h-3 w-3 rounded-full border border-emerald-300/35" />
-            </div>
+            <svg
+  viewBox="0 0 24 24"
+  className="h-[26px] w-[26px] text-emerald-300/70"
+  fill="none"
+  stroke="currentColor"
+  strokeWidth="1.4"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+  aria-hidden="true"
+>
+  <circle cx="9" cy="8" r="3" />
+  <circle cx="17" cy="9" r="2.5" />
+  <path d="M3.5 19c.6-3.2 2.5-5 5.5-5s4.9 1.8 5.5 5" />
+  <path d="M14 14.5c.8-.7 1.8-1 3-1 2.3 0 3.7 1.4 4 4" />
+</svg>
 
           </div>
 
@@ -831,15 +853,23 @@ function Careers() {
               03
             </p>
 
-            <span className="h-1.5 w-1.5 rounded-full bg-white/15 transition-all duration-300 group-hover:scale-125 group-hover:bg-emerald-300" />
-
           </div>
 
           <div className="mt-8 flex h-14 w-14 items-center justify-center rounded-full border border-white/[0.08] bg-white/[0.02] transition-all duration-500 group-hover:border-emerald-300/20 group-hover:bg-emerald-300/[0.04]">
 
-            <span className="flex h-5 w-5 items-center justify-center rounded-full border border-emerald-300/50">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-300/70" />
-            </span>
+            <svg
+  viewBox="0 0 24 24"
+  className="h-[26px] w-[26px] text-emerald-300/70"
+  fill="none"
+  stroke="currentColor"
+  strokeWidth="1.4"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+  aria-hidden="true"
+>
+  <path d="M12 3 19 6v5c0 4.6-2.8 7.8-7 10-4.2-2.2-7-5.4-7-10V6l7-3Z" />
+  <path d="m9 12 2 2 4-4" />
+</svg>
 
           </div>
 
@@ -897,15 +927,24 @@ function Careers() {
               04
             </p>
 
-            <span className="h-1.5 w-1.5 rounded-full bg-white/15 transition-all duration-300 group-hover:scale-125 group-hover:bg-emerald-300" />
 
           </div>
 
           <div className="mt-8 flex h-14 w-14 items-center justify-center rounded-full border border-white/[0.08] bg-white/[0.02] transition-all duration-500 group-hover:border-emerald-300/20 group-hover:bg-emerald-300/[0.04]">
 
-            <span className="text-[20px] font-light text-emerald-300/65 transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
-              ↗
-            </span>
+          <svg
+  viewBox="0 0 24 24"
+  className="h-[26px] w-[26px] text-emerald-300/70 transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+  fill="none"
+  stroke="currentColor"
+  strokeWidth="1.4"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+  aria-hidden="true"
+>
+  <path d="M4 18 10 12l4 4 6-8" />
+  <path d="M15 8h5v5" />
+</svg>
 
           </div>
 
