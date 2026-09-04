@@ -9,8 +9,6 @@ import VisualStory from "./components/VisualStory";
 import CareersWorkplace from "./components/CareersWorkplace";
 import TrendingStories from "./components/TrendingStories";
 import NewsFooterCTA from "./components/NewsFooterCTA";
-
-import Insights from "./pages/Insights";
 import TalentHiring from "./pages/TalentHiring";
 import WorkforceBusiness from "./pages/WorkforceBusiness";
 import CareersGrowth from "./pages/CareersGrowth";
@@ -19,6 +17,7 @@ import ArticleDetail from "./pages/ArticleDetail";
 import ScrollToTop from "./components/ScrollToTop";
 import Careers from "./pages/Careers";
 import JobOpenings from "./pages/JobOpenings";
+import WorkforceChallenges from "./pages/WorkforceChallenges";
 function Home() {
   return (
     <main>
@@ -31,6 +30,7 @@ function Home() {
       </section>
 
       <ArticleGrid />
+      
       <section id="business">
         <BusinessIndustry />
       </section>
@@ -57,9 +57,6 @@ function App() {
       <Routes>
         {/* News Landing Page */}
         <Route path="/" element={<Home />} />
-
-        {/* Insights Page */}
-        <Route path="/insights" element={<Insights />} />
         
          {/* Careers Pages */}
          <Route path="/careers" element={<Careers />} />
@@ -79,6 +76,10 @@ function App() {
         <Route
           path="/article/:slug"
           element={<ArticleDetail />}
+        />
+        <Route
+         path="/workforce-challenges"
+         element={<WorkforceChallenges />}
         />
       </Routes>
 

@@ -3,9 +3,9 @@ import { latestNews } from "../data/newsData";
 function LatestNews() {
   return (
     <section
-  id="latest"
-  className="relative overflow-hidden bg-[#0b0e0e] text-white"
->
+      id="latest"
+      className="relative overflow-hidden bg-[#0b0e0e] text-white"
+    >
       {/* Background depth */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -left-20 top-12 h-72 w-72 rounded-full bg-emerald-400/[0.035] blur-[110px]" />
@@ -101,8 +101,6 @@ function LatestNews() {
                     <div className="absolute -right-16 -top-16 h-44 w-44 rounded-full bg-emerald-300/[0.055] blur-3xl opacity-60 transition-opacity duration-700 group-hover:opacity-100" />
 
                     <div className="absolute inset-[9px] rounded-[17px] border border-white/[0.03]" />
-
-                    <div className="absolute left-6 right-6 top-0 h-px bg-gradient-to-r from-transparent via-white/[0.10] to-transparent" />
                   </div>
 
                   <div className="relative z-10 flex min-h-[315px] flex-col justify-between">
@@ -163,31 +161,15 @@ function LatestNews() {
                       </a>
                     </div>
                   </div>
-
-                  {/* Bottom accent */}
-                  <div className="absolute bottom-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-emerald-300/18 to-transparent" />
                 </article>
               ))}
             </div>
 
             {/* Hint */}
-            <div className="mt-2 flex items-center justify-between">
+            <div className="mt-2">
               <p className="text-[8px] uppercase tracking-[0.18em] text-white/20">
                 Scroll to explore
               </p>
-
-              <div className="flex gap-1">
-                {latestNews.map((_, index) => (
-                  <span
-                    key={index}
-                    className={`h-1 rounded-full ${
-                      index === 0
-                        ? "w-6 bg-emerald-300/70"
-                        : "w-2 bg-white/15"
-                    }`}
-                  />
-                ))}
-              </div>
             </div>
           </div>
         </div>

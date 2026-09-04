@@ -5,23 +5,24 @@ import { articlesData } from "../data/articlesData";
 
 function ArticleGrid() {
   const getReadTime = (slug) => {
-  const fullArticle = articlesData.find(
-    (article) => article.slug === slug
-  );
+    const fullArticle = articlesData.find(
+      (article) => article.slug === slug
+    );
 
-  return fullArticle
-    ? calculateReadTime(fullArticle)
-    : "";
-};
+    return fullArticle
+      ? calculateReadTime(fullArticle)
+      : "";
+  };
+
   return (
-   <section
-  id="articles"
-  className="bg-[#e9ece8] text-[#111111]"
->
+    <section
+      id="articles"
+      className="bg-[#e9ece8] text-[#111111]"
+    >
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-14 md:py-16">
 
         {/* Header */}
-        <div className="flex items-end justify-between border-b border-black/15 pb-4">
+        <div className="border-b border-black/15 pb-4">
           <div>
             <p className="text-[10px] md:text-xs uppercase tracking-[0.24em] text-emerald-700/70">
               Articles
@@ -31,17 +32,6 @@ function ArticleGrid() {
               Ideas & Perspectives
             </h2>
           </div>
-
-          <Link
-            to="/insights"
-            className="group hidden md:inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.2em] text-black/45 transition-colors hover:text-black"
-          >
-            View All Insights
-
-            <span className="transition-transform duration-300 group-hover:translate-x-1">
-              →
-            </span>
-          </Link>
         </div>
 
         {/* Articles */}
@@ -138,8 +128,8 @@ function ArticleGrid() {
 
                   <div className="mt-5 flex items-center justify-between">
                     <p className="text-xs text-black/40">
-  {getReadTime(article.slug)}
-</p>
+                      {getReadTime(article.slug)}
+                    </p>
 
                     <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black/10 transition-all duration-300 group-hover:bg-[#111] group-hover:text-white">
                       →
