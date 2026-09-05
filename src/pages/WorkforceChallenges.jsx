@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { workforceChallengesData } from "../data/workforceChallengesData";
 function WorkforceChallenges() {
   const talentScarcity = workforceChallengesData[0];
@@ -7,6 +8,88 @@ function WorkforceChallenges() {
   return (
     <main className="min-h-screen bg-white px-6 py-14 md:px-8 md:py-16">
       <div className="mx-auto max-w-7xl">
+
+        {/* =====================================================
+            SECTION INTRO
+        ====================================================== */}
+        <div
+          className="
+            mb-9
+            grid
+            gap-7
+            lg:grid-cols-[1.05fr_0.95fr]
+            lg:items-end
+          "
+        >
+          {/* LEFT */}
+          <div>
+            <div className="flex items-center gap-3">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-700/60" />
+
+              <p
+                className="
+                  text-[9px]
+                  font-semibold
+                  uppercase
+                  tracking-[0.24em]
+                  text-emerald-800/60
+                "
+              >
+                Workforce Pressures
+              </p>
+            </div>
+
+            <h1
+              className="
+                mt-4
+                max-w-3xl
+                font-serif
+                text-[40px]
+                font-normal
+                leading-[1.03]
+                tracking-[-0.04em]
+                text-[#171917]
+                md:text-[50px]
+                lg:text-[56px]
+              "
+            >
+              Three forces reshaping
+              <span className="block text-black/42">
+                workforce decisions.
+              </span>
+            </h1>
+          </div>
+
+          {/* RIGHT */}
+          <div className="lg:pb-1">
+            <p
+              className="
+                max-w-lg
+                text-[14px]
+                leading-[1.75]
+                text-black/48
+                md:text-[15px]
+              "
+            >
+              Talent scarcity, faster business change and growing organizational
+              complexity are making workforce decisions more closely connected to
+              business performance.
+            </p>
+
+            <p
+              className="
+                mt-5
+                text-[8px]
+                font-medium
+                uppercase
+                tracking-[0.22em]
+                text-black/35
+              "
+            >
+              What businesses are navigating now
+            </p>
+          </div>
+        </div>
 
         <div className="grid gap-6 md:grid-cols-3">
 
@@ -47,7 +130,6 @@ function WorkforceChallenges() {
             >
               <div className="absolute inset-0 bg-[#111411]" />
 
-
               {/* TITLE */}
               <div
                 className="
@@ -67,28 +149,26 @@ function WorkforceChallenges() {
                   {talentScarcity.label}
                 </p>
 
-               <h2
-  className="
-    mt-4
-    max-w-[300px]
-    font-serif
-    text-[34px]
-    font-normal
-    leading-[1.04]
-    tracking-[-0.035em]
-    text-[#f5f2eb]
-    md:text-[36px]
-  "
->
-  {talentScarcity.title}
-</h2>
+                <h2
+                  className="
+                    mt-4
+                    max-w-[300px]
+                    font-serif
+                    text-[34px]
+                    font-normal
+                    leading-[1.04]
+                    tracking-[-0.035em]
+                    text-[#f5f2eb]
+                    md:text-[36px]
+                  "
+                >
+                  {talentScarcity.title}
+                </h2>
               </div>
 
-
-              {/* VISUAL — CAPABILITIES WITH ONE MISSING */}
+              {/* VISUAL — MISSING CAPABILITY */}
               <div className="absolute inset-x-0 bottom-0 h-[380px]">
 
-                {/* Capability */}
                 <div
                   className="
                     absolute
@@ -105,7 +185,6 @@ function WorkforceChallenges() {
                   "
                 />
 
-                {/* Capability */}
                 <div
                   className="
                     absolute
@@ -143,7 +222,6 @@ function WorkforceChallenges() {
                   "
                 />
 
-                {/* Missing edge */}
                 <div
                   className="
                     absolute
@@ -158,7 +236,6 @@ function WorkforceChallenges() {
                   "
                 />
 
-                {/* Capability */}
                 <div
                   className="
                     absolute
@@ -175,15 +252,11 @@ function WorkforceChallenges() {
                   "
                 />
 
-                {/* Baseline */}
                 <div className="absolute bottom-[53px] left-[9%] right-[9%] h-px bg-white/[0.08]" />
 
-                {/* Ground depth */}
                 <div className="absolute bottom-[24px] left-[16%] h-12 w-[68%] rounded-full bg-black/35 blur-2xl" />
-
               </div>
             </div>
-
 
             {/* HOVER REVEAL */}
             <div
@@ -213,29 +286,29 @@ function WorkforceChallenges() {
                 {talentScarcity.description}
               </p>
 
-              <button
-                type="button"
-                className="
-                  mt-6
-                  inline-flex
-                  items-center
-                  gap-3
-                  text-[8px]
-                  font-medium
-                  uppercase
-                  tracking-[0.2em]
-                  text-white/65
-                  transition-colors
-                  duration-300
-                  hover:text-white
-                "
-              >
-                {talentScarcity.cta}
+             <Link
+  to={`/workforce-challenges/${talentScarcity.id}`}
+  className="
+    mt-6
+    inline-flex
+    items-center
+    gap-3
+    text-[8px]
+    font-medium
+    uppercase
+    tracking-[0.2em]
+    text-white/65
+    transition-colors
+    duration-300
+    hover:text-white
+  "
+>
+  {talentScarcity.cta}
 
-                <span className="transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
-              </button>
+  <span className="transition-transform duration-300 group-hover:translate-x-1">
+    →
+  </span>
+</Link>
             </div>
 
           </article>
@@ -266,18 +339,8 @@ function WorkforceChallenges() {
           >
 
             {/* NORMAL STATE */}
-            <div
-              className="
-                absolute
-                inset-0
-                transition-transform
-                duration-[650ms]
-                ease-[cubic-bezier(0.22,1,0.36,1)]
-                group-hover:-translate-y-[145px]
-              "
-            >
+            <div className="absolute inset-0">
               <div className="absolute inset-0 bg-[#111411]" />
-
 
               {/* TITLE */}
               <div
@@ -311,38 +374,154 @@ function WorkforceChallenges() {
                     md:text-[36px]
                   "
                 >
-                  When business moves
-                  <br />
                   {speedOfChange.title}
                 </h2>
               </div>
 
 
-              {/* VISUAL — TWO PATHS, ONE MOVING AHEAD */}
-              <div className="absolute inset-x-0 bottom-0 h-[370px]">
+              {/* =====================================================
+                  VISUAL — BUSINESS OUTPACING WORKFORCE
+                  Stable before + after hover
+              ====================================================== */}
+              <div
+                className="
+                  absolute
+                  inset-x-0
+                  top-[185px]
+                  h-[165px]
+                "
+              >
 
-                {/* Workforce label */}
+                {/* BUSINESS LABEL */}
                 <p
                   className="
                     absolute
-                    bottom-[93px]
                     left-[10%]
-                    text-[6px]
+                    top-[6px]
+                    z-20
+                    text-[7px]
                     font-medium
                     uppercase
                     tracking-[0.2em]
-                    text-white/25
+                    text-emerald-200/55
+                  "
+                >
+                  Business
+                </p>
+
+                {/* BUSINESS TRAJECTORY */}
+                <div
+                  className="
+                    absolute
+                    left-[10%]
+                    top-[31px]
+                    h-[22px]
+                    w-[72%]
+                    origin-left
+                    -rotate-[7deg]
+                    rounded-full
+                    bg-[#d7d1c5]
+                    transition-transform
+                    duration-700
+                    ease-out
+                    group-hover:translate-x-4
+                  "
+                />
+
+                {/* EMERALD LEADING EDGE */}
+                <div
+                  className="
+                    absolute
+                    right-[12%]
+                    top-[25px]
+                    h-[3px]
+                    w-[47px]
+                    -rotate-[7deg]
+                    bg-emerald-300/55
+                    transition-all
+                    duration-700
+                    group-hover:right-[7%]
+                    group-hover:w-[60px]
+                    group-hover:bg-emerald-300/80
+                  "
+                />
+
+                {/* BUSINESS ENDPOINT */}
+                <div
+                  className="
+                    absolute
+                    right-[7%]
+                    top-[18px]
+                    h-[36px]
+                    w-[36px]
+                    rounded-full
+                    border
+                    border-emerald-200/35
+                    transition-transform
+                    duration-700
+                    ease-out
+                    group-hover:translate-x-2
+                  "
+                />
+
+
+                {/* GAP INDICATOR */}
+                <div
+                  className="
+                    absolute
+                    left-[68%]
+                    top-[62px]
+                    h-[41px]
+                    w-px
+                    bg-gradient-to-b
+                    from-emerald-300/35
+                    to-transparent
+                    transition-all
+                    duration-700
+                    group-hover:h-[48px]
+                  "
+                />
+
+                {/* GAP LABEL */}
+                <p
+                  className="
+                    absolute
+                    left-[70%]
+                    top-[74px]
+                    z-20
+                    text-[6px]
+                    uppercase
+                    tracking-[0.18em]
+                    text-emerald-200/35
+                  "
+                >
+                  Gap
+                </p>
+
+
+                {/* WORKFORCE LABEL */}
+                <p
+                  className="
+                    absolute
+                    left-[10%]
+                    top-[108px]
+                    z-20
+                    text-[7px]
+                    font-medium
+                    uppercase
+                    tracking-[0.2em]
+                    text-white/35
                   "
                 >
                   Workforce
                 </p>
 
-                {/* Workforce trajectory */}
+                {/* WORKFORCE TRAJECTORY */}
                 <div
                   className="
                     absolute
-                    bottom-[78px]
                     left-[10%]
+                    top-[132px]
                     h-[15px]
                     w-[54%]
                     rounded-full
@@ -354,12 +533,12 @@ function WorkforceChallenges() {
                   "
                 />
 
-                {/* Workforce endpoint */}
+                {/* WORKFORCE ENDPOINT */}
                 <div
                   className="
                     absolute
-                    bottom-[72px]
                     left-[61%]
+                    top-[126px]
                     h-[27px]
                     w-[27px]
                     rounded-full
@@ -368,113 +547,6 @@ function WorkforceChallenges() {
                     bg-[#111411]
                   "
                 />
-
-
-                {/* Business label */}
-                <p
-                  className="
-                    absolute
-                    bottom-[208px]
-                    left-[10%]
-                    text-[6px]
-                    font-medium
-                    uppercase
-                    tracking-[0.2em]
-                    text-emerald-200/40
-                  "
-                >
-                  Business
-                </p>
-
-                {/* Business trajectory */}
-                <div
-                  className="
-                    absolute
-                    bottom-[188px]
-                    left-[10%]
-                    h-[22px]
-                    w-[72%]
-                    origin-left
-                    -rotate-[8deg]
-                    rounded-full
-                    bg-[#d7d1c5]
-                    transition-transform
-                    duration-700
-                    ease-out
-                    group-hover:translate-x-5
-                  "
-                />
-
-                {/* Emerald leading edge */}
-                <div
-                  className="
-                    absolute
-                    bottom-[197px]
-                    right-[13%]
-                    h-[3px]
-                    w-[47px]
-                    -rotate-[8deg]
-                    bg-emerald-300/55
-                    transition-all
-                    duration-700
-                    group-hover:right-[7%]
-                    group-hover:w-[62px]
-                    group-hover:bg-emerald-300/80
-                  "
-                />
-
-                {/* Business endpoint */}
-                <div
-                  className="
-                    absolute
-                    bottom-[174px]
-                    right-[7%]
-                    h-[36px]
-                    w-[36px]
-                    rounded-full
-                    border
-                    border-emerald-200/35
-                    transition-transform
-                    duration-700
-                    ease-out
-                    group-hover:translate-x-3
-                  "
-                />
-
-                {/* Widening gap indicator */}
-                <div
-                  className="
-                    absolute
-                    bottom-[108px]
-                    left-[68%]
-                    h-[65px]
-                    w-px
-                    bg-gradient-to-b
-                    from-emerald-300/35
-                    to-transparent
-                    transition-all
-                    duration-700
-                    group-hover:h-[82px]
-                  "
-                />
-
-                <p
-                  className="
-                    absolute
-                    bottom-[133px]
-                    left-[70%]
-                    text-[6px]
-                    uppercase
-                    tracking-[0.18em]
-                    text-emerald-200/30
-                  "
-                >
-                  Gap
-                </p>
-
-
-                {/* Depth */}
-                <div className="absolute bottom-[30px] left-[18%] h-10 w-[64%] rounded-full bg-black/35 blur-2xl" />
 
               </div>
             </div>
@@ -505,32 +577,32 @@ function WorkforceChallenges() {
               </p>
 
               <p className="mt-4 max-w-[310px] text-[12px] leading-[1.75] text-white/62">
-              {speedOfChange.description}
+                {speedOfChange.description}
               </p>
 
-              <button
-                type="button"
-                className="
-                  mt-6
-                  inline-flex
-                  items-center
-                  gap-3
-                  text-[8px]
-                  font-medium
-                  uppercase
-                  tracking-[0.2em]
-                  text-white/65
-                  transition-colors
-                  duration-300
-                  hover:text-white
-                "
-              >
-                {speedOfChange.cta}
+            <Link
+  to={`/workforce-challenges/${speedOfChange.id}`}
+  className="
+    mt-6
+    inline-flex
+    items-center
+    gap-3
+    text-[8px]
+    font-medium
+    uppercase
+    tracking-[0.2em]
+    text-white/65
+    transition-colors
+    duration-300
+    hover:text-white
+  "
+>
+  {speedOfChange.cta}
 
-                <span className="transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
-              </button>
+  <span className="transition-transform duration-300 group-hover:translate-x-1">
+    →
+  </span>
+</Link>
             </div>
 
           </article>
@@ -573,7 +645,6 @@ function WorkforceChallenges() {
             >
               <div className="absolute inset-0 bg-[#111411]" />
 
-
               {/* TITLE */}
               <div
                 className="
@@ -593,21 +664,21 @@ function WorkforceChallenges() {
                   {scaleComplexity.label}
                 </p>
 
-              <h2
-  className="
-    mt-4
-    max-w-[305px]
-    font-serif
-    text-[34px]
-    font-normal
-    leading-[1.04]
-    tracking-[-0.035em]
-    text-[#f5f2eb]
-    md:text-[36px]
-  "
->
-  {scaleComplexity.title}
-</h2>
+                <h2
+                  className="
+                    mt-4
+                    max-w-[305px]
+                    font-serif
+                    text-[34px]
+                    font-normal
+                    leading-[1.04]
+                    tracking-[-0.035em]
+                    text-[#f5f2eb]
+                    md:text-[36px]
+                  "
+                >
+                  {scaleComplexity.title}
+                </h2>
               </div>
 
 
@@ -632,16 +703,10 @@ function WorkforceChallenges() {
                   "
                 />
 
-
-                {/* Connector left */}
+                {/* Connectors */}
                 <div className="absolute bottom-[115px] left-[25%] h-px w-[25%] bg-white/15" />
-
-                {/* Connector right */}
                 <div className="absolute bottom-[115px] right-[25%] h-px w-[25%] bg-white/15" />
-
-                {/* Connector upward */}
                 <div className="absolute bottom-[157px] left-1/2 h-[75px] w-px bg-white/15" />
-
 
                 {/* Left module */}
                 <div
@@ -698,8 +763,7 @@ function WorkforceChallenges() {
                   "
                 />
 
-
-                {/* New layer — lower left */}
+                {/* Extra modules */}
                 <div
                   className="
                     absolute
@@ -717,7 +781,6 @@ function WorkforceChallenges() {
                   "
                 />
 
-                {/* New layer — upper right */}
                 <div
                   className="
                     absolute
@@ -734,7 +797,6 @@ function WorkforceChallenges() {
                     group-hover:-translate-y-2
                   "
                 />
-
 
                 {/* Branches */}
                 <div
@@ -769,8 +831,7 @@ function WorkforceChallenges() {
                   "
                 />
 
-
-                {/* Emerald complexity marker */}
+                {/* Emerald marker */}
                 <div
                   className="
                     absolute
@@ -787,10 +848,7 @@ function WorkforceChallenges() {
                   "
                 />
 
-
-                {/* Depth */}
                 <div className="absolute bottom-[32px] left-[18%] h-11 w-[64%] rounded-full bg-black/35 blur-2xl" />
-
               </div>
             </div>
 
@@ -820,33 +878,33 @@ function WorkforceChallenges() {
               </p>
 
               <p className="mt-4 max-w-[310px] text-[12px] leading-[1.75] text-white/62">
-               {scaleComplexity.description}
+                {scaleComplexity.description}
               </p>
 
-              <button
-                type="button"
-                className="
-                  mt-6
-                  inline-flex
-                  items-center
-                  gap-3
-                  text-[8px]
-                  font-medium
-                  uppercase
-                  tracking-[0.2em]
-                  text-white/65
-                  transition-colors
-                  duration-300
-                  hover:text-white
-                "
-              >
-                {scaleComplexity.cta}
+              <Link
+  to={`/workforce-challenges/${scaleComplexity.id}`}
+  className="
+    mt-6
+    inline-flex
+    items-center
+    gap-3
+    text-[8px]
+    font-medium
+    uppercase
+    tracking-[0.2em]
+    text-white/65
+    transition-colors
+    duration-300
+    hover:text-white
+  "
+>
+  {scaleComplexity.cta}
 
-                <span className="transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
-              </button>
-            </div>
+  <span className="transition-transform duration-300 group-hover:translate-x-1">
+    →
+  </span>
+</Link>
+</div>
 
           </article>
 

@@ -18,6 +18,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Careers from "./pages/Careers";
 import JobOpenings from "./pages/JobOpenings";
 import WorkforceChallenges from "./pages/WorkforceChallenges";
+import WorkforceChallengeDetail from "./pages/WorkforceChallengeDetail";
 function Home() {
   return (
     <main>
@@ -81,6 +82,12 @@ function App() {
          path="/workforce-challenges"
          element={<WorkforceChallenges />}
         />
+        <Route
+  path="/workforce-challenges/:id"
+  element={<WorkforceChallengeDetail />}
+/>
+
+        
       </Routes>
 
     </BrowserRouter>
